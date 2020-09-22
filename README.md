@@ -1,4 +1,4 @@
-# Practica 1 _CompuElectronics 🦾🎮💻
+### Practica 1  # CompuElectronics 🦾🎮💻
 
  
 ##INTEGRANTES
