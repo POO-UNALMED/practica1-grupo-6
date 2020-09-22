@@ -1,7 +1,7 @@
-### Practica 1  # CompuElectronics 🦾🎮💻
+# 🦾 Practica 1  _CompuElectronics 🎮💻_
 
  
-##INTEGRANTES
+## INTEGRANTES
 #### Deyner
 #### Daniel
 #### Deninson Alexander Chamorro Rueda
