@@ -11,13 +11,17 @@ public class Pedido {
 	public int calcular_precio(String p) {
 		/*tomar producto*/
 	}
-	public int Agregar_producto(String a) {
+	public void Agregar_producto(String a) {
 		/*buscar producto*/
+		productos.add(a);
 	}
-	public int quitar_producto(String q) {
+	public void quitar_producto(String q) {
 		/*buscar producto*/
+		productos.remove(q);
 	}
 	public int totalPago(int productos, int cantidad) {
 		/*buscar producto*/
+		this.totalPago=productos*cantidad;
+		return totalPago;
 	}
 }
