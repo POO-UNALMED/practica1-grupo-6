@@ -3,10 +3,11 @@ import java.util.ArrayList;
 public class Cliente {
 	private int compras;
 	private ArrayList<String> lista_facturas = new ArrayList<String>();
-	private ArrayList<String> loginUser = new ArrayList<String>();
+	
+	
 	
 	public int selec_producto(String p) {
-		/*tomar producto*/
+		/*tomar producto???*/
 	}
 	public String consultar_producto(String producto) {
 		String no="no esta";
