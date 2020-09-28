@@ -13,7 +13,8 @@ public class Cliente {
 	public boolean login(String user, int contra) {
 		/*verificacion true o false*/
 	}
-	public int consultar_producto(String producto) {
-		/*buscar producto*/
+	public String consultar_producto(String producto) {
+		lista_facturas.contains(producto);
+		return producto;
 	}
 }

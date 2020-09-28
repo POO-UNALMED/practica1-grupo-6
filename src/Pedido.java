@@ -8,9 +8,7 @@ public class Pedido {
 	private int totalPago;
 	
 	
-	public int calcular_precio(String p) {
-		/*tomar producto*/
-	}
+
 	public void Agregar_producto(String a) {
 		/*buscar producto*/
 		productos.add(a);
