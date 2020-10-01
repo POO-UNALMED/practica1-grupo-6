@@ -1,11 +1,17 @@
 import java.util.ArrayList;
 
-public class Cliente {
-	private int compras;
+public class Cliente extends Persona{
+	
 	private ArrayList<String> lista_facturas = new ArrayList<String>();
+	private Cliente[] listaCliente; 	/*listado de clientes tipo clientes*/
+	public static int compras;			/*compras realizadas anteriormente*/
+	static int Nclientes;		/*numero de clientes*/
+	
+	/*constructor*/
+	public Cliente() { Nclientes++;}
 	
 	
-	
+	/*metodos*/
 	public int selec_producto(String p) {
 		/*tomar producto???*/
 	}
@@ -20,4 +26,6 @@ public class Cliente {
 			return no;
 		
 	}
+	
+	
 }
