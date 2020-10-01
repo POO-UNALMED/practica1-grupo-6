@@ -8,9 +8,15 @@ public class Cliente extends Persona{
 	static int Nclientes;		/*numero de clientes*/
 	
 	/*constructor*/
-	public Cliente() { Nclientes++;}
 	
-	
+	public Cliente(String nombre, String identificacion, String correo, String direccion, String telefono,
+			String genero) {
+		
+		super(nombre, identificacion, correo, direccion, telefono, genero);
+		Nclientes++;
+	}
+
+
 	/*metodos*/
 	public int selec_producto(String p) {
 		/*tomar producto???*/
