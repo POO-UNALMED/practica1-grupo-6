@@ -19,6 +19,12 @@ public class Persona {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "nombre=" + nombre + ", identificacion=" + identificacion;
+	}
+
+
 	private String genero;
 	
 	
