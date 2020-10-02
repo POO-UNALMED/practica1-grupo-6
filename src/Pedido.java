@@ -6,7 +6,7 @@ public class Pedido {
 	private ArrayList<DetallePedido> DetalleProductos = new ArrayList<DetallePedido>();
 	private int num_pedido;
 	private boolean estado;
-	private int totalPago;
+	private double totalPago;
 	
 	
 
@@ -32,9 +32,17 @@ public class Pedido {
 			}
 		}
 	}
-	public int totalPago(int productos, int cantidad) {
-		/*buscar producto*/
-		this.totalPago=productos*cantidad;
-		return totalPago;
+	public double totalPago(int productos, int cantidad) {
+		double total=0;
+		for (int i = 0; i < DetalleProductos.size(); i++) {
+			DetallePedido p1=DetalleProductos.get(i);							/*Producto X de la lista*/
+			double cant=p1.getCantidad();										/*cantidad de productos*/ 
+			Producto product=p1.getProducto();									/*producto X */
+			double valor=product.getPrecio_venta();								/*valor de venta de producto X*/
+			total= (cant*valor)+total;
+		}
+		totalPago= total;
+		return (totalPago);
 	}
+	
 }
