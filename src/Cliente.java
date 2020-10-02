@@ -22,9 +22,10 @@ public class Cliente extends Persona{
 	public int cantidadClientes() {
 		return (Nclientes);						/*total clientes numero*/
 	}
-	public String listaClientes() {
-		for(int i=0; clientes.size(); i++) {
+	public Cliente listaClientes() {
+		for(int i=0; i< clientes.size(); i++) {
 			System.out.println(clientes.get(i));
+		
 		}
 	}
 	
