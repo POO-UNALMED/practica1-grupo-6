@@ -69,15 +69,17 @@ public class Producto {
 		this.precio_venta = precio_venta;
 	}
 	
-	public Producto buscarProducto(String codigo,int cantidad) {
-		
+	public static Producto buscarProducto(String codigo) {
+		Producto p=null;
 		for (int i = 0; i < productos.size(); i++) {
-			if(productos.get(i).codigo_de_barras==codigo&&this.cantidad>=cantidad) {
-				return productos.get(i);
+			if(productos.get(i).codigo_de_barras==codigo) {
+					p=productos.get(i);
+					break;
 			}else {
-				return productos.get(0);
+				p=null;
 				}
 		}
+		return p;
 	}
 	
 	
