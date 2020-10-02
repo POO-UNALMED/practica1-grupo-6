@@ -26,5 +26,14 @@ public class Administrador extends Persona {
 		this.salario = salario;
 	}
 	
+	public Administrador listaAdmin() {
+		Administrador ad= null;
+		for(int i=0; i< administradores.size();) {
+			ad= administradores.get(i);
+			return (ad);
+		}
+		return ad;									/*para verificar, este metodo*/
+	}
+	
 	
 }
