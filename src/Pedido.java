@@ -32,7 +32,7 @@ public class Pedido {
 			}
 		}
 	}
-	public double totalPago(int productos, int cantidad) {
+	public double totalPago() {
 		double total=0;
 		for (int i = 0; i < DetalleProductos.size(); i++) {
 			DetallePedido p1=DetalleProductos.get(i);							/*Producto X de la lista*/
