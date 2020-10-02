@@ -2,8 +2,9 @@ import java.util.ArrayList;
 
 public class Cliente extends Persona{
 	
-	private ArrayList<String> lista_facturas = new ArrayList<String>();
-	private Cliente[] listaCliente; 	/*listado de clientes tipo clientes*/
+
+	static private ArrayList<Cliente>clientes=new ArrayList();			/*listado de clientes tipo clientes*/
+	 	
 	public static int compras;			/*compras realizadas anteriormente*/
 	static int Nclientes;		/*numero de clientes*/
 	
@@ -18,20 +19,15 @@ public class Cliente extends Persona{
 
 
 	/*metodos*/
-	public int selec_producto(String p) {
-		/*tomar producto???*/
+	public int cantidadClientes() {
+		return (Nclientes);						/*total clientes numero*/
 	}
-	public String consultar_producto(String producto) {
-		String no="no esta";
-		String si="si esta";
-		
-		if (lista_facturas.contains(producto)==true) {
-			
-			return si;
-		}else
-			return no;
-		
+	public String listaClientes() {
+		for(int i=0; clientes.size(); i++) {
+			System.out.println(clientes.get(i));
+		}
 	}
+	
 	
 	
 }
