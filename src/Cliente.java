@@ -30,7 +30,22 @@ public class Cliente extends Persona{
 	public void setCompras(){													/*suma compra al historial*/
 		this.compras++;
 	}
+
+	public String dx() {
+		return "cliente";
+	}
 	
+	
+	
+	
+	public String listClientes() {
+		Iterator<Cliente> iterator= clientes.iterator();
+		StringBuffer lista;
+		new StringBuffer ("lista clientes \n");
+		while(iterator.hasNext()) {
+			Cliente cliente1 =(Cliente) iterator.next();
+			lista.append(cliente1.toString());
+
 	
 	
 	
@@ -42,6 +57,13 @@ public class Cliente extends Persona{
 		while(iterator.hasNext()) {
 			Cliente cliente1 =(Cliente) iterator.hasNext();
 			lista.append(Cliente.toString());
+
+	public Cliente listClientes() {
+		Cliente a= null;
+		for(int i=0; i< clientes.size();) {
+			a= clientes.get(i);
+			return (a);
+
 		}
 		return lista.toString();									/*para verificar, este metodo*/
 	}
