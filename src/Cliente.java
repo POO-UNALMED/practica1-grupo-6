@@ -49,7 +49,16 @@ public class Cliente extends Persona{
 		return lista.toString();
 	}
 	
-	public Cliente listCliente() {
+	public String listClientes() {
+		Iterator<Cliente> iterator= clientes.iterator();
+		StringBuffer lista;
+		new StringBuffer ("lista clientes \n");
+		while(iterator.hasNext()) {
+			Cliente cliente1 =(Cliente) iterator.hasNext();
+			lista.append(Cliente.toString());
+
+	public Cliente listClientes() {
+
 		Cliente a= null;
 		for(int i=0; i< clientes.size();) {
 			a= clientes.get(i);
