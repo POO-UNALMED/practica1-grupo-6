@@ -44,6 +44,11 @@ public class Pedido {
 		totalPago= total;
 		return (totalPago);
 	}
-	
+	public boolean confirmacion(String x) {
+		if (x=="si") {
+			return true;
+		}
+		return false;
+	}
 	
 }
