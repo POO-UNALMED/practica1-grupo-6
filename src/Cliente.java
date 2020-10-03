@@ -11,7 +11,7 @@ public class Cliente extends Persona{
 	
 	/*constructor*/
 	
-	public Cliente(String nombre, String identificacion, String correo, String direccion, String telefono,
+	public Cliente(String nombre, int identificacion, String correo, String direccion, String telefono,
 			String genero) {
 		super(nombre, identificacion, correo, direccion, telefono, genero);
 		Nclientes++;
