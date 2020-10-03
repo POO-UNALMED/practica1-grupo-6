@@ -47,7 +47,7 @@ public class Cliente extends Persona{
 			lista.append(cliente1.toString());
 
 	
-	/**/
+	/*github*/
 	
 	
 	public String listClientes() {
