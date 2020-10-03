@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Cliente extends Persona{
 	
@@ -30,13 +31,19 @@ public class Cliente extends Persona{
 		this.compras++;
 	}
 	
-	public Cliente listClientes() {
-		Cliente a= null;
-		for(int i=0; i< clientes.size();) {
-			a= clientes.get(i);
-			return (a);
+	
+	
+	
+	
+	public String listClientes() {
+		Iterator<Cliente> iterator= clientes.iterator();
+		StringBuffer lista;
+		new StringBuffer ("lista clientes \n");
+		while(iterator.hasNext()) {
+			Cliente cliente1 =(Cliente) iterator.hasNext();
+			lista.append(Cliente.toString());
 		}
-		return a;									/*para verificar, este metodo*/
+		return lista.toString();									/*para verificar, este metodo*/
 	}
 	
 	
