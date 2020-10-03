@@ -42,5 +42,18 @@ public class Administrador extends Persona {
 		Producto producto = new Producto(nombre,marca,tipo,cantidad,precio_referencia);
 		return "Producto registrdo exitosamente";
 	}
+	private String registrarCliente(String nombre, int identificacion, String correo, String direccion, String telefono,
+			String genero) {
+		
+		if(Cliente.consultarCliente(identificacion)==null) {
+			Cliente clienteN = new Cliente(nombre,identificacion,correo,direccion,telefono,genero);
+			return "cliente registrdo exitosamente";
+			
+		}else {
+			return "Cliente ya registrado!!!";
+			
+		}
+		
+	}
 	
 }
