@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Cliente extends Persona{
 	
@@ -30,7 +29,10 @@ public class Cliente extends Persona{
 	public void setCompras(){													/*suma compra al historial*/
 		this.compras++;
 	}
-	
+<<<<<<< HEAD
+	public String dx() {
+		return "cliente";
+	}
 	
 	
 	
@@ -40,10 +42,18 @@ public class Cliente extends Persona{
 		StringBuffer lista;
 		new StringBuffer ("lista clientes \n");
 		while(iterator.hasNext()) {
-			Cliente cliente1 =(Cliente) iterator.hasNext();
-			lista.append(Cliente.toString());
+			Cliente cliente1 =(Cliente) iterator.next();
+			lista.append(cliente1.toString());
+=======
+	
+	public Cliente listClientes() {
+		Cliente a= null;
+		for(int i=0; i< clientes.size();) {
+			a= clientes.get(i);
+			return (a);
+>>>>>>> b07f9feea47d4f82b54d113e7fd1f3d6aba1f549
 		}
-		return lista.toString();									/*para verificar, este metodo*/
+		return a;									/*para verificar, este metodo*/
 	}
 	
 	
