@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Administrador extends Persona {
 	private double salario;
@@ -26,13 +27,15 @@ public class Administrador extends Persona {
 		this.salario = salario;
 	}
 	
-	public Administrador listaAdmin() {
-		Administrador ad= null;
-		for(int i=0; i< administradores.size();) {
-			ad= administradores.get(i);
-			return (ad);
+	public String listaAdmin() {
+		Iterator<Administrador> iterator= administradores.iterator();
+		StringBuffer lista=new StringBuffer ("lista administradores \n");
+		while(iterator.hasNext()) {
+			Administrador admin =(Administrador) iterator.next();
+			lista.append(admin.toString());
+
 		}
-		return ad;									/*para verificar, este metodo*/
+		return lista.toString();
 	}
 	
 	

@@ -30,15 +30,8 @@ public class Cliente extends Persona{
 	public void setCompras(){													/*suma compra al historial*/
 		this.compras++;
 	}
-
-	public String dx() {
-		return "cliente";
-	}
 	
-	
-	
-	
-	public String listClientes() {
+	public String listaClientes() {
 		Iterator<Cliente> iterator= clientes.iterator();
 		StringBuffer lista=new StringBuffer ("lista clientes \n");
 		while(iterator.hasNext()) {
