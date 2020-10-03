@@ -1,13 +1,13 @@
 
 public class Persona {
 	private String nombre;
-	private String identificacion;
+	private int identificacion;
 	private String correo;
 	private String Direccion;
 	private String Telefono;
 	
 	
-	public Persona(String nombre, String identificacion, String correo, String direccion, String telefono,
+	public Persona(String nombre, int identificacion, String correo, String direccion, String telefono,
 			String genero) {
 		super();
 		this.nombre = nombre;
@@ -31,7 +31,7 @@ public class Persona {
 	public String getNombre() {
 		return nombre;
 	}
-	public String getIdentificacion() {
+	public int getIdentificacion() {
 		return identificacion;
 	}
 	public String getCorreo() {

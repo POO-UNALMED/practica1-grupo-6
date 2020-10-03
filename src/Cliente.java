@@ -11,7 +11,7 @@ public class Cliente extends Persona{
 	
 	/*constructor*/
 	
-	public Cliente(String nombre, String identificacion, String correo, String direccion, String telefono,
+	public Cliente(String nombre, int identificacion, String correo, String direccion, String telefono,
 			String genero) {
 		super(nombre, identificacion, correo, direccion, telefono, genero);
 		Nclientes++;
@@ -30,6 +30,7 @@ public class Cliente extends Persona{
 	public void setCompras(){													/*suma compra al historial*/
 		this.compras++;
 	}
+
 	
 	public String listaClientes() {
 		Iterator<Cliente> iterator= clientes.iterator();
@@ -40,6 +41,18 @@ public class Cliente extends Persona{
 
 		}
 		return lista.toString();
+	}
+	public static Cliente consultarCliente(int id) {
+		Cliente p=null;
+		for (int i = 0; i < clientes.size(); i++) {
+			if(clientes.get(i).getIdentificacion()==id) {
+					p=clientes.get(i);
+					break;
+			}else {
+				p=null;
+				}
+		}
+		return p;
 	}
 	
 	
