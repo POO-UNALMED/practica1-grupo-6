@@ -5,7 +5,7 @@ public class Cliente extends Persona{
 	
 
 	static private ArrayList<Cliente>clientes=new ArrayList();			/*listado de clientes tipo clientes*/
-	 	
+	static private ArrayList<Factura>listaFacturas=new ArrayList();	
 	private int compras;											/*compras realizadas anteriormente*/
 	static int Nclientes;												/*numero de clientes*/
 	
