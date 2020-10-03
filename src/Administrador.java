@@ -5,6 +5,7 @@ public class Administrador extends Persona {
 	private double salario;
 	private String profesion;
 	static private ArrayList<Administrador>administradores=new ArrayList();
+	static private ArrayList<Producto>productosMasVendidos=new ArrayList();
 	
 	
 	public Administrador(String nombre, int identificacion, String correo, String direccion, String telefono,
