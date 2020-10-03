@@ -17,7 +17,9 @@ public class Factura {
 		Numfactura++;
 		Facturas.add(this);
 	}
-	
+	public String getFecha() {
+		return Fecha;
+	}
 	
 	
 	
