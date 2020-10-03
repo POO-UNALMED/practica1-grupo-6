@@ -6,23 +6,24 @@ public class Producto {
 	private String marca;
 	private String tipo;
 	private double precio_venta;
-	private String codigo_de_barras;
+	private static long codigo_de_barras1=1001;
+	private long codigo_de_barras;
 	private int cantidad;
 	private double precio_referencia;
 	private ArrayList<DetallePedido> Detalles = new ArrayList<DetallePedido>();
 	private static ArrayList<Producto> productos = new ArrayList<Producto>();
 	
-	public Producto(String nombre, String marca, String tipo, String codigo_de_barras,
-			int cantidad, double precio_referencia) {
+	public Producto(String nombre, String marca, String tipo, int cantidad, double precio_referencia) {
 		super();
 		this.nombre = nombre;
 		this.marca = marca;
 		this.tipo = tipo;
-		this.codigo_de_barras = codigo_de_barras;
 		this.cantidad = cantidad;
 		this.precio_referencia = precio_referencia;
+		this.codigo_de_barras=codigo_de_barras1;
 		productos.add(this);
 		asignarPrecioVenta(precio_referencia);
+		codigo_de_barras1++;
 	}
 
 	public int getCantidad() {
@@ -69,7 +70,7 @@ public class Producto {
 		this.precio_venta = precio_venta;
 	}
 	
-	public static Producto consultarProducto(String codigo) {
+	public static Producto consultarProducto(long codigo) {
 		Producto p=null;
 		for (int i = 0; i < productos.size(); i++) {
 			if(productos.get(i).codigo_de_barras==codigo) {

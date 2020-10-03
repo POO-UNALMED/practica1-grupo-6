@@ -7,7 +7,7 @@ public class Administrador extends Persona {
 	static private ArrayList<Administrador>administradores=new ArrayList();
 	
 	
-	public Administrador(String nombre, String identificacion, String correo, String direccion, String telefono,
+	public Administrador(String nombre, int identificacion, String correo, String direccion, String telefono,
 			String genero, double salario, String profesion) {
 		super(nombre, identificacion, correo, direccion, telefono, genero);
 		this.salario = salario;
@@ -38,5 +38,9 @@ public class Administrador extends Persona {
 		return lista.toString();
 	}
 	
+	private String registrarProducto(String nombre, String marca, String tipo, int cantidad, double precio_referencia) {
+		Producto producto = new Producto(nombre,marca,tipo,cantidad,precio_referencia);
+		return "Producto registrdo exitosamente";
+	}
 	
 }

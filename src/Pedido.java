@@ -10,7 +10,7 @@ public class Pedido {
 	
 	
 
-	public void Agregar_producto(String codigo,int cantidad) {
+	public void Agregar_producto(long codigo,int cantidad) {
 		Producto p=Producto.consultarProducto(codigo);
 		if(p!=null) {
 			if(cantidad<=p.getCantidad()) {
