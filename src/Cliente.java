@@ -55,5 +55,9 @@ public class Cliente extends Persona{
 		return p;
 	}
 	
+	public void agregarFactura(Factura f) {
+		listaFacturas.add(f);
+	}
+	
 	
 }

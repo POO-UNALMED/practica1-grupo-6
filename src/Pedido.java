@@ -1,15 +1,23 @@
 import java.util.ArrayList;
 
 public class Pedido {
-	private int cantidad_comprar;
 	private ArrayList<String> productos = new ArrayList<String>();
 	private ArrayList<DetallePedido> DetalleProductos = new ArrayList<DetallePedido>();
+	private static ArrayList<Pedido> pedido = new ArrayList<Pedido>();
 	private int num_pedido;
+	private static int Npedido=1001;
 	private boolean estado;
+	private Factura factura;
 	private double totalPago;
 	
 	
 
+	public Pedido() {
+		this.num_pedido=Npedido;
+		Npedido++;
+	}
+	
+	
 	public void Agregar_producto(long codigo,int cantidad) {
 		Producto p=Producto.consultarProducto(codigo);
 		if(p!=null) {
@@ -49,6 +57,20 @@ public class Pedido {
 			return true;
 		}
 		return false;
+	}
+	
+	public String crearFactura(boolean confirmacion,String fecha,Cliente cliente) {
+		
+		if(confirmacion) {
+			Factura factura = new Factura(fecha,this,cliente);
+			this.factura=factura;
+			this.estado=true;
+			return "Factura realizada";
+		}else {
+			pedido.remove(this);
+			return "No se ha realizado el pedido";
+			
+		}
 	}
 	
 }
