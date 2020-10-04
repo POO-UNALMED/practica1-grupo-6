@@ -40,7 +40,7 @@ public class Pedido {
 			}
 		}
 	}
-	public double totalPago() {
+	public void totalPago() {
 		double total=0;
 		for (int i = 0; i < DetalleProductos.size(); i++) {
 			DetallePedido p1=DetalleProductos.get(i);							/*Producto X de la lista*/
@@ -49,8 +49,7 @@ public class Pedido {
 			double valor=product.getPrecio_venta();								/*valor de venta de producto X*/
 			total= (cant*valor)+total;
 		}
-		totalPago= total;
-		return (totalPago);
+		totalPago=total;
 	}
 	public boolean confirmacion(String x) {
 		if (x=="si") {
@@ -65,7 +64,9 @@ public class Pedido {
 			Factura factura = new Factura(fecha,this,cliente);
 			this.factura=factura;
 			this.estado=true;
+			this.totalPago();
 			return "Factura realizada";
+			
 		}else {
 			pedido.remove(this);
 			return "No se ha realizado el pedido";
