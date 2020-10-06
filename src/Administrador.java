@@ -56,5 +56,30 @@ public class Administrador extends Persona {
 		}
 		
 	}
+	public String devolucion(int codFac, long codProd, int cantidad) {
+		Factura d1 = Factura.consultarFactura(codFac);
+		if(d1 != null) {
+			Pedido p = d1.getPedido();
+			
+			DetallePedido dp = p.consultarProducto(codProd);
+			if(dp != null) {
+				
+				if(dp.modificarCantidad(cantidad)){
+					d1.agregarFactura(d1);
+					return "Devolucion exitosa";
+				}
+				else {
+					return "cantidad de devolucion no es correcta";
+				}
+			}else {
+				return "Producto no encontrado";
+			}
+			
+		}else {
+			return "factura no registrada";
+		}
+		
+	}
+	
 	
 }

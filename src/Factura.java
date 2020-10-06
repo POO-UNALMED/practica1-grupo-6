@@ -24,7 +24,12 @@ public class Factura {
 	public int getNfacturas() {
 		return Nfactura;
 	}
-	
+	public Pedido getPedido() {
+		return pedido;
+	}
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
 	public static Factura consultarFactura(int id) {
 		Factura p=null;
 		for (int i = 0; i < Facturas.size(); i++) {
