@@ -21,7 +21,22 @@ public class Factura {
 	public String getFecha() {
 		return Fecha;
 	}
+	public int getNfacturas() {
+		return Nfactura;
+	}
 	
+	public static Factura consultarFactura(int id) {
+		Factura p=null;
+		for (int i = 0; i < Facturas.size(); i++) {
+			if(Facturas.get(i).getNfacturas()==id) {
+					p=Facturas.get(i);
+					break;
+			}else {
+				p=null;
+				}
+		}
+		return p;
+	}
 	
 	
 }
