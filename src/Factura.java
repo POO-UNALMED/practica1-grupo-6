@@ -39,5 +39,8 @@ public class Factura {
 		return p;
 	}
 	
+	public void agregarFactura(Factura F) {
+		Facturas.add(F);
+	}
 	
 }
