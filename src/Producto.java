@@ -82,6 +82,10 @@ public class Producto {
 		}
 		return p;
 	}
+
+	public static long getCodigo_de_barras1() {
+		return codigo_de_barras1;
+	}
 	
 	
 }

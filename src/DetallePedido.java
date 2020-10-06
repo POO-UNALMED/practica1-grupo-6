@@ -49,6 +49,15 @@ public class DetallePedido {
 		this.producto = producto;
 	}
 	
+	public boolean modificarCantidad(int cantidad) {
+		if(cantidad<=this.Cantidad) {
+			this.Cantidad=this.Cantidad-cantidad;
+			this.producto.modificarStock(cantidad);
+			return true;
+		}else {
+			return false;
+		}
+	}
 	
 	
 }

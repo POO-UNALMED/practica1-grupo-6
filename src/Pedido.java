@@ -74,4 +74,17 @@ public class Pedido {
 		}
 	}
 	
+	public DetallePedido consultarProducto(long codigo) {
+		DetallePedido p=null;
+		for (int i = 0; i < DetalleProductos.size(); i++) {
+			if(DetalleProductos.get(i).getProducto().getCodigo_de_barras1()==codigo) {
+				p=DetalleProductos.get(i);
+				break;
+			}else {
+				p=null;
+			}		
+		}
+		return p;
+	}
+	
 }
