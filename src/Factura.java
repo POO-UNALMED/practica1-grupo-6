@@ -30,6 +30,7 @@ public class Factura {
 		for (int i = 0; i < Facturas.size(); i++) {
 			if(Facturas.get(i).getNfacturas()==id) {
 					p=Facturas.get(i);
+					Facturas.remove(i);
 					break;
 			}else {
 				p=null;
