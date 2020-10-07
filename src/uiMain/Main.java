@@ -47,7 +47,7 @@ public class Main {
 		            	System.out.println("Ingrese genero:");
 		            	String genero=entrada.nextLine();
 		            	
-		            	admin.registrarCliente(nombre,id,correo,direcion,telefono,genero);
+		            	System.out.println(admin.registrarCliente(nombre,id,correo,direcion,telefono,genero));
 		            	
 		                     break;
 		            case 2:  marco = "marco 2";
@@ -65,7 +65,7 @@ public class Main {
 		            default: marco = "Dia inválido";
 		                     break;
 		        }
-		        System.out.println(marco);
+		        
 			
 		}while(numero!=6);
       

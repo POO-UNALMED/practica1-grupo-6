@@ -55,7 +55,7 @@ public class Administrador extends Persona {
 		
 		if(Cliente.consultarCliente(identificacion)==null) {
 			Cliente clienteN = new Cliente(nombre,identificacion,correo,direccion,telefono,genero);
-			return "cliente registrdo exitosamente";
+			return "cliente registrado exitosamente";
 			
 		}else {
 			return "Cliente ya registrado!!!";
