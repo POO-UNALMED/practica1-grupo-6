@@ -27,7 +27,7 @@ public class Main {
 		         
 		        switch (numero) 
 		        {
-		            case 1:  marco = "marco 1";
+		            case 1:  marco = "marco ";
 		                     break;
 		            case 2:  marco = "marco 2";
 		                     break;
