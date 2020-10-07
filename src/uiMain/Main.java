@@ -30,22 +30,22 @@ public class Main {
 		        {
 		            case 1:
 		            	System.out.println("Ingrese nombre cliente: ");
-		            	String nombre= entrada.nextLine();
+		            	String nombre= entrada.next();
 		            	
-		            	System.out.println("Ingrese identificacion");
+		            	System.out.println("Ingrese identificacion:");
 		            	int  id= entrada.nextInt();
 		            	
 		            	System.out.println("Ingrese correo:");
-		            	String correo= entrada.nextLine();
+		            	String correo= entrada.next();
 		            	
 		            	System.out.println("Ingrese direccion:");
-		            	String direcion= entrada.nextLine();
+		            	String direcion= entrada.next();
 		            	
 		            	System.out.println("Ingrese telefono:");
-		            	String telefono= entrada.nextLine();
+		            	String telefono= entrada.next();
 		            	
 		            	System.out.println("Ingrese genero:");
-		            	String genero=entrada.nextLine();
+		            	String genero=entrada.next();
 		            	
 		            	System.out.println(admin.registrarCliente(nombre,id,correo,direcion,telefono,genero));
 		            	
