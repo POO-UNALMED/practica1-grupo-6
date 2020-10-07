@@ -31,7 +31,7 @@ public class Main {
 		            case 1:
 		            	System.out.println("Ingrese nombre cliente: ");
 		            	String nombre= entrada.nextLine();
-		            	
+		        
 		            	System.out.println("Ingrese identificacion");
 		            	int  id= entrada.nextInt();
 		            	
