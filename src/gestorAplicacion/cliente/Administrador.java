@@ -46,11 +46,11 @@ public class Administrador extends Persona {
 		return lista.toString();
 	}
 	
-	private String registrarProducto(String nombre, String marca, String tipo, int cantidad, double precio_referencia) {
+	public String registrarProducto(String nombre, String marca, String tipo, int cantidad, double precio_referencia) {
 		Producto producto = new Producto(nombre,marca,tipo,cantidad,precio_referencia);
 		return "Producto registrdo exitosamente";
 	}
-	private String registrarCliente(String nombre, int identificacion, String correo, String direccion, String telefono,
+	public String registrarCliente(String nombre, int identificacion, String correo, String direccion, String telefono,
 			String genero) {
 		
 		if(Cliente.consultarCliente(identificacion)==null) {

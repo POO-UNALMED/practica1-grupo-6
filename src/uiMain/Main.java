@@ -28,7 +28,27 @@ public class Main {
 		         
 		        switch (numero) 
 		        {
-		            case 1:  marco = "marco ";
+		            case 1:
+		            	System.out.println("Ingrese nombre cliente: ");
+		            	String nombre= entrada.nextLine();
+		            	
+		            	System.out.println("Ingrese identificacion");
+		            	int  id= entrada.nextInt();
+		            	
+		            	System.out.println("Ingrese correo:");
+		            	String correo= entrada.nextLine();
+		            	
+		            	System.out.println("Ingrese direccion:");
+		            	String direcion= entrada.nextLine();
+		            	
+		            	System.out.println("Ingrese telefono:");
+		            	String telefono= entrada.nextLine();
+		            	
+		            	System.out.println("Ingrese genero:");
+		            	String genero=entrada.nextLine();
+		            	
+		            	admin.registrarCliente(nombre,id,correo,direcion,telefono,genero);
+		            	
 		                     break;
 		            case 2:  marco = "marco 2";
 		                     break;
