@@ -90,7 +90,7 @@ public class Pedido {
 	
 	public String listaProductos() {
 		Iterator<DetallePedido> iterator= DetalleProductos.iterator();
-		StringBuffer lista=new StringBuffer ("lista clientes \n");
+		StringBuffer lista=new StringBuffer ("Nombre   Codigo   Cantidad \n");
 		while(iterator.hasNext()) {
 			DetallePedido producto =(DetallePedido) iterator.next();
 			lista.append(producto.toString());

@@ -47,5 +47,8 @@ public class Factura {
 	public void agregarFactura(Factura F) {
 		Facturas.add(F);
 	}
+	public String imprimirFactura() {
+		return ("Numero de factura: "+ Nfactura + "\nFecha: "+ Fecha +"\n"+ pedido.listaProductos());
+	}
 	
 }
