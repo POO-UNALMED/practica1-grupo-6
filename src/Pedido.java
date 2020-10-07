@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Pedido {
 	private ArrayList<String> productos = new ArrayList<String>();
@@ -85,6 +86,17 @@ public class Pedido {
 			}		
 		}
 		return p;
+	}
+	
+	public String listaProductos() {
+		Iterator<DetallePedido> iterator= DetalleProductos.iterator();
+		StringBuffer lista=new StringBuffer ("lista clientes \n");
+		while(iterator.hasNext()) {
+			DetallePedido producto =(DetallePedido) iterator.next();
+			lista.append(producto.toString());
+
+		}
+		return lista.toString();
 	}
 	
 }

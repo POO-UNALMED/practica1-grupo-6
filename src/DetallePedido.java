@@ -58,7 +58,12 @@ public class DetallePedido {
 			return false;
 		}
 	}
+
+	@Override
+	public String toString() {
+		return this.producto.getNombre() +this.producto.getCodigo_de_barras1()+ Cantidad ;
+	}
 	
 	
-	
+
 }
