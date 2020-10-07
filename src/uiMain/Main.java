@@ -1,6 +1,7 @@
 package uiMain;
 import java.util.Scanner;
-
+import gestorAplicacion.cliente.*;
+import gestorAplicacion.factura.*;
 
 public class Main {
 
@@ -10,7 +11,7 @@ public class Main {
 
 	    int numero;
 		
-		
+		Administrador admin = new Administrador("carlos", 11111, "car@ht.com", "carrera", 3, "32234", "masculino", 10000, "tecnico" );
 		
 		do {
 			
