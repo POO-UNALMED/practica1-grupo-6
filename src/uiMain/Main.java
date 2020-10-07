@@ -11,7 +11,7 @@ public class Main {
 
 	    int numero;
 		
-		Administrador admin = new Administrador("carlos", 11111, "car@ht.com", "carrera", 3, "32234", "masculino", 10000, "tecnico" );
+		Administrador admin = new Administrador("carlos", 11111, "car@ht.com", "carrera 3", "32234", "masculino", 10000.0, "tecnico" );
 		
 		do {
 			
