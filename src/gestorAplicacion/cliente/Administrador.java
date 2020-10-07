@@ -1,5 +1,12 @@
+package gestorAplicacion.cliente;
+import gestorAplicacion.factura.*;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import gestorAplicacion.factura.DetallePedido;
+import gestorAplicacion.factura.Factura;
+import gestorAplicacion.factura.Pedido;
+import gestorAplicacion.factura.Producto;
 
 public class Administrador extends Persona {
 	private double salario;

@@ -1,3 +1,4 @@
+package gestorAplicacion.factura;
 
 public class DetallePedido {
 	

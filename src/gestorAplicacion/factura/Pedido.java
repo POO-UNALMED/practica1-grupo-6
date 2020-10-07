@@ -1,5 +1,8 @@
+package gestorAplicacion.factura;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import gestorAplicacion.cliente.Cliente;
 
 public class Pedido {
 	private ArrayList<String> productos = new ArrayList<String>();

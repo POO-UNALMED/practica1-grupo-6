@@ -1,3 +1,4 @@
+package gestorAplicacion.cliente;
 
 public class Persona {
 	private String nombre;

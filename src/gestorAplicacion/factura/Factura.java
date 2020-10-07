@@ -1,4 +1,7 @@
+package gestorAplicacion.factura;
 import java.util.ArrayList;
+
+import gestorAplicacion.cliente.Cliente;
 
 public class Factura {
 	private String Fecha;

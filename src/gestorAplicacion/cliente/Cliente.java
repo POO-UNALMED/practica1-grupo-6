@@ -1,5 +1,8 @@
+package gestorAplicacion.cliente;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import gestorAplicacion.factura.Factura;
 
 public class Cliente extends Persona{
 	

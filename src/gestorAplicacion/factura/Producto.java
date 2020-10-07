@@ -1,3 +1,4 @@
+package gestorAplicacion.factura;
 import java.util.ArrayList;
 
 public class Producto {
