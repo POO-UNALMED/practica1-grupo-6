@@ -13,7 +13,7 @@ public class Main {
 		
 		
 		
-		int day = 5;
+		
         String marco;
          
         switch (numero) 
