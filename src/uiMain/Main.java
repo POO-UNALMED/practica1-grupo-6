@@ -52,29 +52,28 @@ public class Main {
 		            	
 		                     break;
 		            case 2:  
+		            	//*String nombre, String marca, String tipo, int cantidad, double precio_referencia
 		            	
-		            	System.out.println("Ingrese nombre cliente: ");
+		            	System.out.println("Ingrese nombre producto: ");
 		            	String nombrep= entrada.next();
 		            	
-		            	System.out.println("Ingrese identificacion:");
-		            	int  idp= entrada.nextInt();
+		            	System.out.println("Ingrese marca:");
+		            	String  marcap= entrada.next();
 		            	
-		            	System.out.println("Ingrese correo:");
-		            	String correop= entrada.next();
+		            	System.out.println("Ingrese tipo:");
+		            	String tipop= entrada.next();
 		            	
-		            	System.out.println("Ingrese direccion:");
-		            	String direcionp= entrada.next();
+		            	System.out.println("Ingrese cantidad:");
+		            	int cantidadp= entrada.nextInt();
 		            	
-		            	System.out.println("Ingrese telefono:");
-		            	String telefonop= entrada.next();
-		            	
-		            	System.out.println("Ingrese genero:");
-		            	String generop=entrada.next();
-		            	
-		            	System.out.println(admin.registrarCliente(nombre,id,correo,direcion,telefono,genero));
+		            	System.out.println("Ingrese precio_referencia:");
+		            	double precio_referencia= entrada.nextDouble();
 		            	
 		            	
-		            	marco = "marco 2";
+		            	System.out.println(admin.registrarProducto(nombrep,marcap,tipop,cantidadp,precio_referencia));
+		            	
+		            	
+		
 		                     break;
 		            case 3:  marco = "marco 3";
 		                     break;
