@@ -30,10 +30,6 @@ public class Main {
 		        {
 		            case 1:
 		            	System.out.println("Ingrese nombre cliente: ");
-
-		            	String nombre= entrada.nextLine();
-		        
-		            	System.out.println("Ingrese identificacion");
 		            	String nombre= entrada.next();
 		            	
 		            	System.out.println("Ingrese identificacion:");
