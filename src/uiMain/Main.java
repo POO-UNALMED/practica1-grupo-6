@@ -51,7 +51,30 @@ public class Main {
 		            	System.out.println(admin.registrarCliente(nombre,id,correo,direcion,telefono,genero));
 		            	
 		                     break;
-		            case 2:  marco = "marco 2";
+		            case 2:  
+		            	
+		            	System.out.println("Ingrese nombre cliente: ");
+		            	String nombrep= entrada.next();
+		            	
+		            	System.out.println("Ingrese identificacion:");
+		            	int  idp= entrada.nextInt();
+		            	
+		            	System.out.println("Ingrese correo:");
+		            	String correop= entrada.next();
+		            	
+		            	System.out.println("Ingrese direccion:");
+		            	String direcionp= entrada.next();
+		            	
+		            	System.out.println("Ingrese telefono:");
+		            	String telefonop= entrada.next();
+		            	
+		            	System.out.println("Ingrese genero:");
+		            	String generop=entrada.next();
+		            	
+		            	System.out.println(admin.registrarCliente(nombre,id,correo,direcion,telefono,genero));
+		            	
+		            	
+		            	marco = "marco 2";
 		                     break;
 		            case 3:  marco = "marco 3";
 		                     break;
