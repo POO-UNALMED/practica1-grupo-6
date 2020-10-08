@@ -1,5 +1,7 @@
 package gestorAplicacion.factura;
 
+import java.util.ArrayList;
+
 public class DetallePedido {
 	
 	private int id;
@@ -7,6 +9,7 @@ public class DetallePedido {
 	private Pedido pedido;
 	private Producto producto;
 	private static int  id1=1001;
+	private static ArrayList<DetallePedido> Detalles = new ArrayList<DetallePedido>();
 	
 	public DetallePedido( int cantidad, Pedido pedido, Producto producto) {
 		super();
@@ -15,6 +18,7 @@ public class DetallePedido {
 		this.pedido = pedido;
 		this.producto = producto;
 		this.producto.modificarStock(-cantidad);
+		Detalles.add(this);
 		id1++;
 	}
 
@@ -62,9 +66,13 @@ public class DetallePedido {
 
 	@Override
 	public String toString() {
-		return this.producto.getNombre() +this.producto.getCodigo_de_barras1()+ Cantidad ;
+		return this.producto.getNombre() +this.producto.getCodigo_de_barras1()+this.id+ Cantidad ;
 	}
 	
+	public void eliminarDetalle(DetallePedido d,int Cantidad) {
+		Detalles.remove(d);
+		modificarCantidad(Cantidad);
+	}
 	
 
 }

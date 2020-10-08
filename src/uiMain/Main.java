@@ -75,7 +75,89 @@ public class Main {
 		            	
 		
 		                     break;
-		            case 3:  marco = "marco 3";
+		            case 3:  
+		            	System.out.println("Ingrese id del cliente: ");
+		            	
+		            	int identificacion= entrada.nextInt();
+		            	
+		            	Cliente c=Cliente.consultarCliente(identificacion);
+		            	if(c!=null) {
+		            		Pedido p=admin.crearPedido();
+		            		int opcion;
+		            		do {//se registran los productos
+		            			System.out.println("Ingrese una opcion");
+		            			System.out.println("1.Agregar Producto");
+		            			System.out.println("2.Retirar Producto");
+		            			System.out.println("3.Terminar Pedido");
+		            			opcion=entrada.nextInt();
+		            			
+		            			switch (opcion) {
+		            			case 1:
+		            				if(!Producto.getProductos().isEmpty()) {
+		            					System.out.println("Ingrese codigo del producto: ");
+		            					long codigo = entrada.nextLong();
+		            					
+		            					System.out.println("Ingrese cantidad a llevar");
+		            					int cantidad = entrada.nextInt();
+		            					
+		            					System.out.println(p.Agregar_producto(codigo, cantidad));
+		            				}else {
+		            					System.out.println("No hay productos en el inventario");
+		            				}
+		            				break;
+		            			case 2:
+		            				System.out.println(p.listaProductos());
+		            				if(!p.getDetalleProductos().isEmpty()) {
+		            					System.out.println("Ingrese codigo de detalle: ");
+		            					int codigoDetalle = entrada.nextInt();	            					
+		            					p.quitar_producto(codigoDetalle);
+		            				}else {
+		            					System.out.println("No se ha registrado ningun producto");
+		            				}
+		            				break;
+		            			case 3:
+		            				System.out.println("Pedido terminado");
+		            				break;
+		            			default:
+		            				System.out.println("Opcion invalida");
+		            				break;
+		            			}
+		            			
+		            		}while(opcion!=3);
+		            		
+		            		int op;
+		            		boolean conf=false;
+		            		do {// se confirma el pedido
+		            			System.out.println("Ingrese una opcion: ");
+			            		System.out.println("1.confirmar pedido");
+			            		System.out.println("2.cancelar pedido");
+			            		
+			            		 op = entrada.nextInt();
+			            		
+			            		switch(op) {
+			            		
+			            		case 1:
+			            			conf=p.confirmacion("si");
+			            			break;
+			            		case 2:
+			            			conf=p.confirmacion("no");
+			            			break;
+			            		default:
+			            			System.out.println("opcion no valida");
+			            		}
+		            		}while(op!=1||op!=2);
+		            		
+		           
+		            		if(conf) {//se crea la factura
+		            			System.out.println("Ingrese la fecha");
+			            		String fecha = entrada.next();
+			            		p.crearFactura(conf, fecha, c);
+		            			System.out.println(p.getFactura().imprimirFactura());
+		            		}
+		            		
+		            	}else {
+		            		System.out.println("cliente no registrado");
+		            	}
 		                     break;
 		            case 4:  marco = "marco 4";
 		                     break;

@@ -88,5 +88,8 @@ public class Administrador extends Persona {
 		
 	}
 	
-	
+	public Pedido crearPedido() {
+		Pedido p= new Pedido();
+		return p;
+	}
 }

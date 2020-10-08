@@ -87,6 +87,11 @@ public class Producto {
 	public static long getCodigo_de_barras1() {
 		return codigo_de_barras1;
 	}
+
+	public static ArrayList<Producto> getProductos() {
+		return productos;
+	}
+	
 	
 	
 }

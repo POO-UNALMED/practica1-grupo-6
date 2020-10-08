@@ -22,23 +22,25 @@ public class Pedido {
 	}
 	
 	
-	public void Agregar_producto(long codigo,int cantidad) {
+	public String Agregar_producto(long codigo,int cantidad) {
 		Producto p=Producto.consultarProducto(codigo);
 		if(p!=null) {
 			if(cantidad<=p.getCantidad()) {
 				DetallePedido d= new DetallePedido(cantidad,this,p);
-				DetalleProductos.add(d);				
+				DetalleProductos.add(d);
+				return "producto agregado";
 			}else {
-				System.out.println("Supero la cantidad en el inventario");
+				return"Supero la cantidad en el inventario";
 			}
 		}else {
-			System.out.println("Producto no encontrado");
+			return"Producto no encontrado";
 		}
 		
 	}
 	public void quitar_producto(int id) {
 		for (int i = 0; i < DetalleProductos.size(); i++) {
 			if(DetalleProductos.get(i).getId()==id) {
+				DetalleProductos.get(i).eliminarDetalle(DetalleProductos.get(i), DetalleProductos.get(i).getCantidad());
 				DetalleProductos.remove(DetalleProductos.get(i));
 				break;
 			}
@@ -93,7 +95,7 @@ public class Pedido {
 	
 	public String listaProductos() {
 		Iterator<DetallePedido> iterator= DetalleProductos.iterator();
-		StringBuffer lista=new StringBuffer ("Nombre   Codigo   Cantidad \n");
+		StringBuffer lista=new StringBuffer ("Nombre   Codigo  CodidoDetalle  Cantidad \n");
 		while(iterator.hasNext()) {
 			DetallePedido producto =(DetallePedido) iterator.next();
 			lista.append(producto.toString());
@@ -101,5 +103,18 @@ public class Pedido {
 		}
 		return lista.toString();
 	}
+
+
+	public ArrayList<DetallePedido> getDetalleProductos() {
+		return DetalleProductos;
+	}
+
+
+	public Factura getFactura() {
+		return factura;
+	}
+
+
+	
 	
 }
