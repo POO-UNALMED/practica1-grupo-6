@@ -30,22 +30,27 @@ public class Main {
 		        {
 		            case 1:
 		            	System.out.println("Ingrese nombre cliente: ");
+
 		            	String nombre= entrada.nextLine();
 		        
 		            	System.out.println("Ingrese identificacion");
+		            	String nombre= entrada.next();
+		            	
+		            	System.out.println("Ingrese identificacion:");
+
 		            	int  id= entrada.nextInt();
 		            	
 		            	System.out.println("Ingrese correo:");
-		            	String correo= entrada.nextLine();
+		            	String correo= entrada.next();
 		            	
 		            	System.out.println("Ingrese direccion:");
-		            	String direcion= entrada.nextLine();
+		            	String direcion= entrada.next();
 		            	
 		            	System.out.println("Ingrese telefono:");
-		            	String telefono= entrada.nextLine();
+		            	String telefono= entrada.next();
 		            	
 		            	System.out.println("Ingrese genero:");
-		            	String genero=entrada.nextLine();
+		            	String genero=entrada.next();
 		            	
 		            	System.out.println(admin.registrarCliente(nombre,id,correo,direcion,telefono,genero));
 		            	
@@ -62,7 +67,7 @@ public class Main {
 		                     break;
 		            case 7:  marco = "marco 7";
 		                     break;
-		            default: marco = "Dia inválido";
+		            default: marco = "Dia invï¿½lido";
 		                     break;
 		        }
 		        
