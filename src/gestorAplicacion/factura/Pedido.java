@@ -80,10 +80,10 @@ public class Pedido {
 		}
 	}
 	
-	public DetallePedido consultarProducto(long codigo) {
+	public DetallePedido consultarProducto(int codigo) {
 		DetallePedido p=null;
 		for (int i = 0; i < DetalleProductos.size(); i++) {
-			if(DetalleProductos.get(i).getProducto().getCodigo_de_barras1()==codigo) {
+			if(DetalleProductos.get(i).getId()==codigo) {
 				p=DetalleProductos.get(i);
 				break;
 			}else {

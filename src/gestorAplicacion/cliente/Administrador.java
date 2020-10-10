@@ -63,7 +63,7 @@ public class Administrador extends Persona {
 		}
 		
 	}
-	public String devolucion(int codFac, long codProd, int cantidad) {
+	public String devolucion(int codFac, int codProd, int cantidad) {
 		Factura d1 = Factura.consultarFactura(codFac);
 		if(d1 != null) {
 			Pedido p = d1.getPedido();

@@ -195,8 +195,13 @@ public class Main {
 		            			System.out.println(consulta.getPedido().listaProductos());
 		            			System.out.println("Ingrese el codigo del producto: ");
 		            			int codigoPro = entrada.nextInt();
-		            			if() {
+		            			if(consulta.getPedido().consultarProducto(codigoPro)!=null) {
+		            				System.out.println("Ingrese la cantidad de devolucion");
+		            				int cantidad = entrada.nextInt();
 		            				
+		            				System.out.println(admin.devolucion(Nfactura, codigoPro, cantidad));
+		            			}else {
+		            				System.out.println("producto no encontrado");
 		            			}
 		            			
 		            		}
@@ -204,6 +209,8 @@ public class Main {
 		            			System.out.println("No se encontro factura");
 		            			break;
 		            		}
+		           		}else {
+		           			System.out.println("Cliente no encontrado");
 		           		}
 		                    
 		            case 6:
