@@ -113,6 +113,9 @@ public class Pedido {
 	public Factura getFactura() {
 		return factura;
 	}
+	public double gettotalPago() {
+		return totalPago;
+	}
 
 
 	

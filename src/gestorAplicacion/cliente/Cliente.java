@@ -9,7 +9,7 @@ public class Cliente extends Persona{
 
 	static private ArrayList<Cliente>clientes=new ArrayList();			/*listado de clientes tipo clientes*/
 	static private ArrayList<Factura>listaFacturas=new ArrayList();	
-	private int compras;											/*compras realizadas anteriormente*/
+	private long compras;											/*compras realizadas anteriormente*/
 	static int Nclientes;												/*numero de clientes*/
 	
 	/*constructor*/
@@ -23,11 +23,19 @@ public class Cliente extends Persona{
 
 
 	/*metodos*/
+	public void totalCompras() {
+		long control=0;
+		for (int i = 0;i <=listaFacturas.size();i++) {
+			control+=listaFacturas.get(i).getPedido().gettotalPago();
+		}
+		compras=control;
+	}
+	
 	public int cantidadClientes() {
 		return (Nclientes);													/*total clientes numero*/
 	}
 	
-	public int getCompras() {
+	public long getCompras() {
 		return compras;
 	}
 	public void setCompras(){													/*suma compra al historial*/
@@ -61,6 +69,8 @@ public class Cliente extends Persona{
 	public void agregarFactura(Factura f) {
 		listaFacturas.add(f);
 	}
+	
+	
 	
 	
 }
