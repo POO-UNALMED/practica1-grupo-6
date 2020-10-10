@@ -194,9 +194,9 @@ public class Main {
 		            			}
 ;		            		}
 		            		else {
-		            			
+		            			break;
 		            		}
-		                     break;
+		                     
 		            case 7:  marco = "marco 7";
 		                     break;
 		            case 8:  marco = "marco 8";
