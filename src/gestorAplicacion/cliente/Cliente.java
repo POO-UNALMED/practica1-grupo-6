@@ -70,6 +70,17 @@ public class Cliente extends Persona{
 	public void agregarFactura(Factura f) {
 		listaFacturas.add(f);
 	}
+
+	public String listaFactura() {
+		Iterator<Factura> iterator= listaFacturas.iterator();
+		StringBuffer lista=new StringBuffer ("Fecha Codigo\n");
+		while(iterator.hasNext()) {
+			Factura factura =(Factura) iterator.next();
+			lista.append(factura.toString());
+
+		}
+		return lista.toString();
+	}
 	public static ArrayList<Cliente> getClientes(){
 		return clientes;
 	}

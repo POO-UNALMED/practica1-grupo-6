@@ -182,8 +182,30 @@ public class Main {
 		            	}
 		            	
 		                     break;
-		            case 5:  marco = "marco 5";
-		                     break;
+		            case 5:  
+		            	System.out.println("Ingrese Identificacion: ");
+		            	int identificacion_2= entrada.nextInt();
+		            	Cliente devolucion = Cliente.consultarCliente(identificacion_2);
+		            	if(devolucion!=null) {
+		            		System.out.println(devolucion.listaFactura());
+		            		System.out.println("Ingrese codigo de Factura ");
+		            		int Nfactura  = entrada.nextInt();
+		            		Factura consulta = Factura.consultarFactura(Nfactura);
+		            		if(consulta!=null) {
+		            			System.out.println(consulta.getPedido().listaProductos());
+		            			System.out.println("Ingrese el codigo del producto: ");
+		            			int codigoPro = entrada.nextInt();
+		            			if() {
+		            				
+		            			}
+		            			
+		            		}
+		            		else {
+		            			System.out.println("No se encontro factura");
+		            			break;
+		            		}
+		           		}
+		                    
 		            case 6:
 		            		if(Cliente.getClientes().size()>=3) {
 		            			ArrayList <Cliente> Mayores = admin.clientesMayoritarios();

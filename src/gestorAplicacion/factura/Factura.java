@@ -53,5 +53,8 @@ public class Factura {
 	public String imprimirFactura() {
 		return ("Numero de factura: "+ Nfactura + "\nFecha: "+ Fecha +"\n"+ pedido.listaProductos());
 	}
+	public String toString() {
+		return Fecha +" "+ Nfactura;
+	}
 	
 }
