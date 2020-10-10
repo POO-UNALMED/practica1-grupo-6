@@ -161,15 +161,20 @@ public class Main {
 		                     break;
 		            case 4: 
 		            	/*condicional*/
-		            	System.out.println(Producto.listaProductos());
+		            	if(Producto.getProductos().isEmpty()) {
+		            		System.out.println("No hay productos en el inventario");
+		            	}else {
+		            		System.out.println(Producto.listaProductos());
+			            	
+			            	System.out.println("Ingrese el codigo del producto: ");
+			            	long codigo = entrada.nextLong();
+			            	
+			            	System.out.println("Ingresa la cantidad: ");
+			            	int cantidad = entrada.nextInt();
+			            	
+			            	System.out.println(admin.agregarInventario(codigo, cantidad));
+		            	}
 		            	
-		            	System.out.println("Ingrese el codigo del producto: ");
-		            	long codigo = entrada.nextLong();
-		            	
-		            	System.out.println("Ingresa la cantidad: ");
-		            	int cantidad = entrada.nextInt();
-		            	
-		            	System.out.println(admin.agregarInventario(codigo, cantidad));
 		                     break;
 		            case 5:  marco = "marco 5";
 		                     break;
