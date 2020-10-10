@@ -216,7 +216,7 @@ public class Main {
 		            case 6:
 		            		if(Cliente.getClientes().size()>=3) {
 		            			ArrayList <Cliente> Mayores = admin.clientesMayoritarios();
-		            			for(int i = 0;i <= Mayores.size();i++) {
+		            			for(int i = 0;i < Mayores.size();i++) {
 		            				
 		            				System.out.println("Cliente "+ (i+1)+": " + Mayores.get(i));
 		            				
