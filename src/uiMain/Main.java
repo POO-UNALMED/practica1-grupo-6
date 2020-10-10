@@ -160,7 +160,9 @@ public class Main {
 		            	}
 		                     break;
 		            case 4: 
+		            	/*condicional*/
 		            	System.out.println(Producto.listaProductos());
+		            	
 		            	System.out.println("Ingrese el codigo del producto: ");
 		            	long codigo = entrada.nextLong();
 		            	

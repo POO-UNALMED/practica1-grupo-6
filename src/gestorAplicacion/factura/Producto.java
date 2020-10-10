@@ -104,7 +104,7 @@ public class Producto {
 
 	public static String listaProductos() {
 		Iterator<Producto> iterator= productos.iterator();
-		StringBuffer lista=new StringBuffer ("Nombre  Codigo  Cantidad ");
+		StringBuffer lista=new StringBuffer ("Nombre  Codigo  Cantidad \n");
 		while(iterator.hasNext()) {
 			Producto producto =(Producto) iterator.next();
 			lista.append(producto.toString());
