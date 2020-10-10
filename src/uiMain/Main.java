@@ -192,7 +192,7 @@ public class Main {
 		            				System.out.println("Cliente "+ (i+1)+": " + Mayores.get(i));
 		            				
 		            			}
-;		            		}
+		            		}
 		            		else {
 		            			break;
 		            		}
