@@ -19,9 +19,14 @@ public class Main {
 			System.out.println("1.Registrar cliente");
 			System.out.println("2.Registrar Producto");
 			System.out.println("3.Crear Pedido");
-			System.out.println("4.Agregar inventario");
+			System.out.println("4.inventario");	/*un sub menu...1 editar inventario 2 salir*/
 			System.out.println("5.Realizar devolucion");
-			System.out.println("6.Salir");
+			System.out.println("6.Clientes mayoritarios");
+			System.out.println("7.Mercancia inactiva");
+			System.out.println("8.Balances");
+			System.out.println("9.Descuentos");
+			System.out.println("0.Salir");
+			
 			numero = entrada.nextInt();
 			
 			  String marco;
@@ -182,12 +187,17 @@ public class Main {
 		                     break;
 		            case 7:  marco = "marco 7";
 		                     break;
-		            default: marco = "Dia inv�lido";
+		            case 8:  marco = "marco 8";
+		            break;
+		            case 9:  marco = "marco 9";
+                    break;
+		         
+		            default: marco = "numero invalido";
 		                     break;
 		        }
 		        
 			
-		}while(numero!=6);
+		}while(numero!=0);
       
 
 	}
