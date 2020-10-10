@@ -92,4 +92,14 @@ public class Administrador extends Persona {
 		Pedido p= new Pedido();
 		return p;
 	}
+	
+	public String agregarInventario(long codigo, int cantidad) {
+		Producto p = Producto.consultarProducto(codigo);
+		if(p!=null) {
+			p.modificarStock(cantidad);
+			return "Cantidad ingresada";
+		}else {
+			return "Producto no encontrado";
+		}
+	}
 }

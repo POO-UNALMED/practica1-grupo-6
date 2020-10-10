@@ -159,7 +159,15 @@ public class Main {
 		            		System.out.println("cliente no registrado");
 		            	}
 		                     break;
-		            case 4:  marco = "marco 4";
+		            case 4: 
+		            	System.out.println(Producto.listaProductos());
+		            	System.out.println("Ingrese el codigo del producto: ");
+		            	long codigo = entrada.nextLong();
+		            	
+		            	System.out.println("Ingresa la cantidad: ");
+		            	int cantidad = entrada.nextInt();
+		            	
+		            	System.out.println(admin.agregarInventario(codigo, cantidad));
 		                     break;
 		            case 5:  marco = "marco 5";
 		                     break;

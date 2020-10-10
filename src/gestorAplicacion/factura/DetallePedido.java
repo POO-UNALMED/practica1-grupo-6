@@ -66,7 +66,7 @@ public class DetallePedido {
 
 	@Override
 	public String toString() {
-		return this.producto.getNombre() +this.producto.getCodigo_de_barras1()+this.id+ Cantidad ;
+		return this.producto.getNombre()+ " "+this.producto.getCodigo_de_barras1()+" "+this.id+" "+Cantidad ;
 	}
 	
 	public void eliminarDetalle(DetallePedido d,int Cantidad) {

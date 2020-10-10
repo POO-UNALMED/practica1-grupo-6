@@ -1,5 +1,8 @@
 package gestorAplicacion.factura;
 import java.util.ArrayList;
+import java.util.Iterator;
+
+import gestorAplicacion.cliente.Cliente;
 
 public class Producto {
 	
@@ -92,6 +95,23 @@ public class Producto {
 		return productos;
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		return  nombre + " " +  codigo_de_barras + " " + cantidad ;
+	}
+
+	public static String listaProductos() {
+		Iterator<Producto> iterator= productos.iterator();
+		StringBuffer lista=new StringBuffer ("Nombre  Codigo  Cantidad ");
+		while(iterator.hasNext()) {
+			Producto producto =(Producto) iterator.next();
+			lista.append(producto.toString());
+
+		}
+		return lista.toString();
+	}
 	
 	
 }
