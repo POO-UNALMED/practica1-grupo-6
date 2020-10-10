@@ -102,4 +102,23 @@ public class Administrador extends Persona {
 			return "Producto no encontrado";
 		}
 	}
+	
+	public ArrayList<Cliente> clientesMayoritarios() {
+		ArrayList<Cliente> MayorCliente = Cliente.getClientes();
+		ArrayList<Cliente> TopFinal = new ArrayList<Cliente>(); 
+		for (int i = 0;i < 3;i++) {
+			long compra = 0;
+			int x=0;
+			for (int j=0;j<=MayorCliente.size();j++) {
+				if(MayorCliente.get(j).totalCompras()>compra) {
+					x=j;
+					compra=MayorCliente.get(j).totalCompras();
+				}
+			}
+			TopFinal.add(MayorCliente.get(x));
+			MayorCliente.remove(MayorCliente.get(x));
+		}
+		return TopFinal;
+	}
+	
 }
