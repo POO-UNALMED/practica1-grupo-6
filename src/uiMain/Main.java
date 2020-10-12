@@ -25,7 +25,7 @@ public class Main {
 			System.out.println("6.Clientes mayoritarios");
 			System.out.println("7.Mercancia inactiva");
 			System.out.println("8.Balances");
-			System.out.println("9.Descuentos");
+			System.out.println("9.Productos mas vendidos");
 			System.out.println("0.Salir");
 			
 			numero = entrada.nextInt();
@@ -269,9 +269,9 @@ public class Main {
 		            	}
 		            	
 		                     break;
-		            case 8:  marco = "marco 8";
+		            case 8:  marco = "8.Balances";
 		            break;
-		            case 9:  marco = "marco 9";
+		            case 9:  marco = "9.Productos mas vendidos";
                     break;
 		         
 		            default: marco = "numero invalido";
