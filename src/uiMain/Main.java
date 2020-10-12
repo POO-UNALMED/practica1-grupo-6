@@ -282,6 +282,20 @@ public class Main {
 		            *hacer comprarcion de cada producto para sacar el mayor
 		            *inicializar el atributo (con for ..podria ser) "ventas
 		            */
+		            System.out.println("Ingrese la fecha inicial: ");
+	            	System.out.println("ejemplo(12/11/2020)");
+	            	String fechan = entrada.next();
+	            	
+	            	System.out.println("Ingrese la fecha final: ");
+	            	System.out.println("ejemplo(20/11/2020)");
+	            	String fechan2 = entrada.next();
+	            	
+	            	String [] fecha_n = fechan.split("/"); 
+	            	String [] fecha_n2 = fechan2.split("/");
+		            
+		            
+		            
+		            
                     break;
 		         
 		            default: marco = "numero invalido";

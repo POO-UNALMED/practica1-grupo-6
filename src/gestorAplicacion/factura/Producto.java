@@ -6,6 +6,7 @@ import gestorAplicacion.cliente.Cliente;
 
 public class Producto {
 	
+	private int ventas;
 	private String nombre;
 	private String marca;
 	private String tipo;
@@ -113,5 +114,7 @@ public class Producto {
 		return lista.toString();
 	}
 	
-	
+	public void setVentas(int can) {
+		ventas= can+ventas;
+	}
 }

@@ -116,6 +116,11 @@ public class Pedido {
 	public double gettotalPago() {
 		return totalPago;
 	}
+	public void setSumaVentas() {
+		for(int i =0;i<DetalleProductos.size();i++) {
+			DetalleProductos.get(i).getProducto().setVentas(DetalleProductos.get(i).getCantidad());
+		}
+	}
 
 
 	
