@@ -121,4 +121,34 @@ public class Administrador extends Persona {
 		return TopFinal;
 	}
 	
+	public ArrayList<Producto> mercanciaMuerta (String fechaInicial,String fechaFinal){
+		
+		ArrayList<Factura> facturas = Factura.rangoDeFacturas(fechaInicial, fechaFinal);
+		ArrayList<Producto> productosVendidos = new ArrayList<>();
+		
+		for (int i = 0; i < facturas.size(); i++) {
+			Pedido p = facturas.get(i).getPedido();
+			ArrayList<DetallePedido> productos = p.getDetalleProductos();
+			for (int j = 0; j < productos.size(); j++) {
+				
+				if(!productosVendidos.contains(productos.get(j).getProducto())) {
+					productosVendidos.add(productos.get(j).getProducto());
+				}
+				
+			}
+			
+		}
+		
+		ArrayList<Producto> mercanciaMuerta = new ArrayList<>();
+		ArrayList<Producto> inventario = Producto.getProductos();
+		for (int i = 0; i < inventario.size(); i++) {
+			if(!productosVendidos.contains(inventario.get(i))) {
+				mercanciaMuerta.add(inventario.get(i));
+			}
+		}
+		
+		return mercanciaMuerta;
+		
+	}
+	
 }

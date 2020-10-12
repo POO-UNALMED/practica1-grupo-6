@@ -57,4 +57,29 @@ public class Factura {
 		return Fecha +" "+ Nfactura;
 	}
 	
+	public static ArrayList<Factura> rangoDeFacturas(String fecha1,String fecha2){
+		String [] fecha_1= fecha1.split("/");
+		String [] fecha_2= fecha2.split("/");
+		ArrayList<Factura> rangoDeFacturas = new ArrayList<>();
+		
+		for (int i = 0; i < Facturas.size(); i++) {
+			String [] fecha3=Facturas.get(i).Fecha.split("/");
+			
+			if((Integer.parseInt(fecha_1[2])==Integer.parseInt(fecha_2[2]))&&(Integer.parseInt(fecha_1[1])==Integer.parseInt(fecha_2[1]))) {
+				
+				if(Integer.parseInt(fecha3[0])>=Integer.parseInt(fecha_1[0])&&Integer.parseInt(fecha3[0])<=Integer.parseInt(fecha_2[0])) {
+					rangoDeFacturas.add(Facturas.get(i));
+				}
+				
+			}else if ((Integer.parseInt(fecha_1[2])==Integer.parseInt(fecha_2[2]))&&(Integer.parseInt(fecha_1[1])!=Integer.parseInt(fecha_2[1]))) {
+				
+				if(Integer.parseInt(fecha3[1])>=Integer.parseInt(fecha_1[1])&&Integer.parseInt(fecha3[1])<=Integer.parseInt(fecha_2[1])) {
+					rangoDeFacturas.add(Facturas.get(i));
+				}
+				
+			}
+		}
+		return rangoDeFacturas;
+	}
+	
 }
