@@ -270,8 +270,18 @@ public class Main {
 		            	
 		                     break;
 		            case 8:  marco = "8.Balances";
+		            
+		            
+		            
 		            break;
-		            case 9:  marco = "9.Productos mas vendidos";
+		            case 9:  marco = "9.Productos mas vendidos";/*1.atributo en producto("ventas")
+		            
+		            *metodo de las facturas en el mes()
+		            *metodo que le sume la cantidad de productos vendidos a "ventas"de cada producto
+		            *sacar los productos vendidos en el rango
+		            *hacer comprarcion de cada producto para sacar el mayor
+		            *inicializar el atributo (con for ..podria ser) "ventas
+		            */
                     break;
 		         
 		            default: marco = "numero invalido";
