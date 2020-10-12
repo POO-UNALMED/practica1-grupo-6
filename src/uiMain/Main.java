@@ -228,9 +228,11 @@ public class Main {
 		                     
 		            case 7:  
 		            	System.out.println("Ingrese la fecha inicial: ");
+		            	System.out.println("ejemplo(12/11/2020)");
 		            	String fecha1 = entrada.next();
 		            	
 		            	System.out.println("Ingrese la fecha final: ");
+		            	System.out.println("ejemplo(20/11/2020)");
 		            	String fecha2 = entrada.next();
 		            	
 		            	String [] fecha_1 = fecha1.split("/"); 
