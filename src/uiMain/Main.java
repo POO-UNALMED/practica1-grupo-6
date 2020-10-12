@@ -270,6 +270,8 @@ public class Main {
 		            	
 		                     break;
 		            case 8:  marco = "8.Balances";
+		            	/*ingrese fecha(mes o año)
+		            	 * retorne clientes, #Total productos Vendidos y total precio de ventas*/
 		            
 		            
 		            
