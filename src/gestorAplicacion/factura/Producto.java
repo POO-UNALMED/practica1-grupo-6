@@ -117,4 +117,10 @@ public class Producto {
 	public void setVentas(int can) {
 		ventas= can+ventas;
 	}
+	public int getVentas() {
+		return ventas;
+	}
+	public void setVentas() {
+		ventas= 0;
+	}
 }

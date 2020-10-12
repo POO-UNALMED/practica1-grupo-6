@@ -150,9 +150,11 @@ public class Administrador extends Persona {
 		return mercanciaMuerta;
 		
 	}
-	public ArrayList<Producto> productosVendidos(String fechaInicial,String fechaFinal){
+	public ArrayList<Producto> productosMasVendidos(String fechaInicial,String fechaFinal){
 		ArrayList<Factura> facturas = Factura.rangoDeFacturas(fechaInicial, fechaFinal);
 		ArrayList<Producto> productosVendidos = new ArrayList<>();
+		ArrayList<Producto> topMasVendidos = new ArrayList<>();
+		ArrayList<Producto> productosT = Producto.getProductos();
 		
 		for (int i = 0; i < facturas.size(); i++) {
 			Pedido p = facturas.get(i).getPedido();
@@ -170,7 +172,22 @@ public class Administrador extends Persona {
 			
 		}
 		
-		return productosVendidos;
+		for (int i = 0;i < 3;i++) {
+			int venta = 0;
+			int x=0;
+			for (int j=0;j<productosVendidos.size();j++) {
+				if(productosVendidos.get(j).getVentas()>venta) {
+					x=j;
+					venta=productosVendidos.get(j).getVentas();
+				}
+			}
+			topMasVendidos.add(productosVendidos.get(x));
+			topMasVendidos.remove(productosVendidos.get(x));
+		}
+		for(int i=0; i<productosT.size();i++) {
+			productosT.get(i).setVentas();
+		}
+		return topMasVendidos;
 	}
 	
 }

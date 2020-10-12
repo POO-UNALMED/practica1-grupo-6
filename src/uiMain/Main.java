@@ -274,14 +274,8 @@ public class Main {
 		            
 		            
 		            break;
-		            case 9:  marco = "9.Productos mas vendidos";/*1.atributo en producto("ventas")
-		            
-		            *metodo de las facturas en el mes()
-		            *metodo que le sume la cantidad de productos vendidos a "ventas"de cada producto
-		            *sacar los productos vendidos en el rango
-		            *hacer comprarcion de cada producto para sacar el mayor
-		            *inicializar el atributo (con for ..podria ser) "ventas
-		            */
+		            case 9:  
+		            	
 		            System.out.println("Ingrese la fecha inicial: ");
 	            	System.out.println("ejemplo(12/11/2020)");
 	            	String fechan = entrada.next();
@@ -293,6 +287,35 @@ public class Main {
 	            	String [] fecha_n = fechan.split("/"); 
 	            	String [] fecha_n2 = fechan2.split("/");
 		            
+	            	if(Integer.parseInt(fecha_n[2])==Integer.parseInt(fecha_n2[2])&&Integer.parseInt(fecha_n[1])==Integer.parseInt(fecha_n2[1])&&Integer.parseInt(fecha_n[0])<Integer.parseInt(fecha_n2[0])) {
+	            		
+	            		if(!Factura.rangoDeFacturas(fechan, fechan2).isEmpty()) {
+	            			ArrayList<Producto> Productos = admin.productosMasVendidos(fechan, fechan2);
+		            		System.out.println("Nombre   Codido de barras   Cantidad");
+		            		for (int i = 0; i < Productos.size(); i++) {
+								System.out.println(Productos.get(i).toString());
+								}
+		            		}else {
+		            			System.out.println("No hay facturas realizadas en el rango de tiempo pedido");
+		            		}
+	            		
+	            		
+	            		
+	            	}else if(Integer.parseInt(fecha_n[2])==Integer.parseInt(fecha_n2[2])&&Integer.parseInt(fecha_n[1])<Integer.parseInt(fecha_n2[1])) {
+	            		
+	            		if(!Factura.rangoDeFacturas(fechan, fechan2).isEmpty()) {
+	            			ArrayList<Producto> Productos = admin.productosMasVendidos(fechan, fechan2);
+		            		System.out.println("Nombre   Codido de barras   Cantidad");
+		            		for (int i = 0; i < Productos.size(); i++) {
+								System.out.println(Productos.get(i).toString());
+								}
+		            		}else {
+		            			System.out.println("No hay facturas realizadas en el rango de tiempo pedido");
+		            		}
+	            		
+	            	}else {
+	            		System.out.println("El rango de las fechas no es correcto");
+	            	}
 		            
 		            
 		            
