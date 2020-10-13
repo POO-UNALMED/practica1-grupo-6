@@ -169,19 +169,33 @@ public class Main {
 		            	/*condicional*/
 		            	if(Producto.getProductos().isEmpty()) {
 		            		System.out.println("No hay productos en el inventario");
-		            	}else {
-		            		System.out.println(Producto.listaProductos());
-			            	
-			            	System.out.println("Ingrese el codigo del producto: ");
-			            	long codigo = entrada.nextLong();
-			            	
-			            	System.out.println("Ingresa la cantidad: ");
-			            	int cantidad = entrada.nextInt();
-			            	
-			            	System.out.println(admin.agregarInventario(codigo, cantidad));
+		            		break;
 		            	}
 		            	
-		                     break;
+		            	else {
+		            		System.out.println(Producto.listaProductos());
+			            	
+		            		System.out.println("Ingrese una opcion");
+	            			System.out.println("1.editar inventario");
+	            			System.out.println("2.Salir");
+	            			int opcion1=entrada.nextInt();
+	            			
+	            			switch (opcion1) {
+	            			case 1:
+	            				System.out.println("Ingrese el codigo del producto: ");
+				            	long codigo = entrada.nextLong();
+				            	
+				            	System.out.println("Ingresa la cantidad: ");
+				            	int cantidad = entrada.nextInt();
+				            	
+				            	System.out.println(admin.agregarInventario(codigo, cantidad));
+				            	break;
+	            			case 2:
+	            				break;
+	            			}
+			            	
+		            	}
+		            	break;
 		            case 5:  
 		            	System.out.println("Ingrese Identificacion: ");
 		            	int identificacion_2= entrada.nextInt();
