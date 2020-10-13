@@ -193,6 +193,16 @@ public class Administrador extends Persona {
 	public String Balance(String fecha1,String fecha2){
 		ArrayList<Factura> BalanceF = Factura.rangoDeFacturas(fecha1, fecha2);
 		ArrayList<Cliente> ListaBaClientes = new ArrayList<>();
+		double Totalpagos=0;
+		int totalProductos =0;
+		/*total de ventas*/
+		for(int j = 0;j<BalanceF.size();j++) {
+			Totalpagos += BalanceF.get(j).getPedido().gettotalPago();
+		}
+		/*Total de Productos*/
+		for(int p = 0;p<BalanceF.size();p++) {
+			totalProductos += BalanceF.get(p).getPedido().CantidadProductos();
+		}
 		
 		for(int i = 0;i<BalanceF.size();i++) {
 			
@@ -210,7 +220,7 @@ public class Administrador extends Persona {
 
 		}
 		
-		return lista.toString();
+		return lista.toString()+"\n Total Ventas : "+Totalpagos+"\n Total ";
 	}
 	
 }

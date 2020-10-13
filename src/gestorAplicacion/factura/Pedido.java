@@ -113,13 +113,23 @@ public class Pedido {
 	public Factura getFactura() {
 		return factura;
 	}
+	
 	public double gettotalPago() {
 		return totalPago;
 	}
+	
 	public void setSumaVentas() {
 		for(int i =0;i<DetalleProductos.size();i++) {
 			DetalleProductos.get(i).getProducto().setVentas(DetalleProductos.get(i).getCantidad());
 		}
+	}
+	
+	public int CantidadProductos() {
+		int total = 0;
+		for (int i=0;i<DetalleProductos.size();i++) {
+			total += DetalleProductos.get(i).getCantidad();
+		}
+		return total;
 	}
 
 
