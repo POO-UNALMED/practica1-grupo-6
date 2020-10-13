@@ -82,4 +82,9 @@ public class Factura {
 		return rangoDeFacturas;
 	}
 	
+	public Cliente getClientes() {
+		
+		return cliente;
+	}
+	
 }

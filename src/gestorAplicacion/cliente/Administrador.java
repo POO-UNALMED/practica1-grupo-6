@@ -190,4 +190,51 @@ public class Administrador extends Persona {
 		return topMasVendidos;
 	}
 	
+	public String Balance(String fecha1,String fecha2){
+		ArrayList<Factura> BalanceF = Factura.rangoDeFacturas(fecha1, fecha2);
+		ArrayList<Cliente> ListaBaClientes = new ArrayList<>();
+		
+		for(int i = 0;i<BalanceF.size();i++) {
+			
+			if(!ListaBaClientes.contains(BalanceF.get(i).getClientes())) {
+				ListaBaClientes.add(BalanceF.get(i).getClientes());
+				
+			}
+			
+		}
+		Iterator<Cliente> iterator= ListaBaClientes.iterator();
+		StringBuffer lista=new StringBuffer ("lista clientes \n");
+		while(iterator.hasNext()) {
+			Cliente cliente1 =(Cliente) iterator.next();
+			lista.append(cliente1.toString());
+
+		}
+		
+		return lista.toString();
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
