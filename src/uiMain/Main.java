@@ -285,25 +285,27 @@ public class Main {
 			            
 		            	if(Integer.parseInt(fecha_f1[2])==Integer.parseInt(fecha_f2[2])&&Integer.parseInt(fecha_f1[1])==Integer.parseInt(fecha_f2[1])&&Integer.parseInt(fecha_f1[0])<Integer.parseInt(fecha_f2[0])) {
 		            		
+		            		if(!Factura.rangoDeFacturas(f1, f2).isEmpty()) {
+		            			System.out.println(admin.Balance(f1, f2));
+		            			
+			            		}else {
+			            			System.out.println("No hay facturas realizadas en el rango de tiempo pedido");
+			            		}
 		            		
 		            		
 		            		
 		            		
 		            	}else if(Integer.parseInt(fecha_f1[2])==Integer.parseInt(fecha_f2[2])&&Integer.parseInt(fecha_f1[1])<Integer.parseInt(fecha_f2[1])) {
 		            		
-		            		/*if(!Factura.rangoDeFacturas(fechan, fechan2).isEmpty()) {
-		            			ArrayList<Producto> Productos = admin.productosMasVendidos(fechan, fechan2);
-			            		System.out.println("Nombre   Codido de barras   Cantidad");
-			            		for (int i = 0; i < Productos.size(); i++) {
-									System.out.println(Productos.get(i).toString());
-									}
+		            		if(!Factura.rangoDeFacturas(f1, f2).isEmpty()) {
+		            			System.out.println(admin.Balance(f1, f2));
 			            		}else {
 			            			System.out.println("No hay facturas realizadas en el rango de tiempo pedido");
 			            		}
 		            		
 		            	}else {
 		            		System.out.println("El rango de las fechas no es correcto");
-		            	} */
+		            	} 
 		            	
 		            	
 		            	

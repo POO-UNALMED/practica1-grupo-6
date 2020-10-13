@@ -220,7 +220,7 @@ public class Administrador extends Persona {
 
 		}
 		
-		return lista.toString()+"\n Total Ventas : "+Totalpagos+"\n Total ";
+		return lista.toString()+"\n Total Vendido : "+Totalpagos+"\n Total Productos : "+totalProductos;
 	}
 	
 }
