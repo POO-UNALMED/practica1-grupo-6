@@ -154,7 +154,21 @@ static public String Balance(String fecha1,String fecha2){
 	return lista.toString()+"\n Total Vendido : "+Totalpagos+"\n Total Productos : "+totalProductos;
 }
 
+static public String registrarCliente(Administrador admin,String nombre, int identificacion, String correo, String direccion, String telefono,
+			String gener) {
+	return admin.registrarCliente(nombre, identificacion, correo, direccion, telefono, gener);
+}
 
+static public String registrarProducto(Administrador admin,String nombre, String marca, String tipo, int cantidad, double precio_referencia) {
+	return admin.registrarProducto(nombre, marca, tipo, cantidad, precio_referencia);
+}
 
+static public Pedido crearPedido(Administrador admin) {
+	return admin.crearPedido();
+}
+
+static public String agregarInventario(Administrador admin,long codigo, int cantidad) {
+	return admin.agregarInventario(codigo, cantidad);
+}
 
 }

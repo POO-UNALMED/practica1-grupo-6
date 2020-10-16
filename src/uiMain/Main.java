@@ -5,10 +5,12 @@ import gestorAplicacion.cliente.*;
 import gestorAplicacion.factura.*;
 
 public class Main {
-
+	
+	static Scanner entrada = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner entrada = new Scanner(System.in);
+		
 
 	    int numero;
 		
@@ -35,26 +37,8 @@ public class Main {
 		        switch (numero) 
 		        {
 		            case 1:
-		            	System.out.println("Ingrese nombre cliente: ");
-		            	String nombre= entrada.next();
 		            	
-		            	System.out.println("Ingrese identificacion:");
-
-		            	int  id= entrada.nextInt();
-		            	
-		            	System.out.println("Ingrese correo:");
-		            	String correo= entrada.next();
-		            	
-		            	System.out.println("Ingrese direccion:");
-		            	String direcion= entrada.next();
-		            	
-		            	System.out.println("Ingrese telefono:");
-		            	String telefono= entrada.next();
-		            	
-		            	System.out.println("Ingrese genero:");
-		            	String genero=entrada.next();
-		            	
-		            	System.out.println(admin.registrarCliente(nombre,id,correo,direcion,telefono,genero));
+		            	registrarCliente();
 		            	
 		                     break;
 		            case 2:  
@@ -380,6 +364,39 @@ public class Main {
 		}while(numero!=0);
       
 
+	}
+	
+	static void registrarCliente() {
+		
+		System.out.println("ingrese su identificacion: ");
+		int ident = entrada.nextInt();
+		Administrador admin = Administrador.consultarAdmin(ident);
+		if(admin!=null) {
+			System.out.println("Ingrese nombre cliente: ");
+	    	String nombre= entrada.next();
+	    	
+	    	System.out.println("Ingrese identificacion:");
+
+	    	int  id= entrada.nextInt();
+	    	
+	    	System.out.println("Ingrese correo:");
+	    	String correo= entrada.next();
+	    	
+	    	System.out.println("Ingrese direccion:");
+	    	String direcion= entrada.next();
+	    	
+	    	System.out.println("Ingrese telefono:");
+	    	String telefono= entrada.next();
+	    	
+	    	System.out.println("Ingrese genero:");
+	    	String genero=entrada.next();
+	    	
+	    	System.out.println(Usuario.registrarCliente(admin,nombre,id,correo,direcion,telefono,genero));
+		}
+		else {
+			System.out.println("Identificacion incorrecta");
+		}
+		
 	}
 
 }

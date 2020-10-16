@@ -35,6 +35,19 @@ public class Administrador extends Persona {
 		this.salario = salario;
 	}
 	
+	public static Administrador consultarAdmin(int id) {
+		Administrador p=null;
+		for (int i = 0; i < administradores.size(); i++) {
+			if(administradores.get(i).getIdentificacion()==id) {
+					p=administradores.get(i);
+					break;
+			}else {
+				p=null;
+				}
+		}
+		return p;
+	}
+	
 	public String listaAdmin() {
 		Iterator<Administrador> iterator= administradores.iterator();
 		StringBuffer lista=new StringBuffer ("lista administradores \n");
