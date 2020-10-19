@@ -103,18 +103,21 @@ static public ArrayList<Producto> productosMasVendidos(String fechaInicial,Strin
 		
 	}
 	
-	for (int i = 0;i < 3;i++) {
-		int venta = 0;
-		int x=0;
-		for (int j=0;j<productosVendidos.size();j++) {
-			if(productosVendidos.get(j).getVentas()>venta) {
-				x=j;
-				venta=productosVendidos.get(j).getVentas();
+	if(productosVendidos.size()>=3) {
+		for (int i = 0;i < 3;i++) {
+			int venta = 0;
+			int x=0;
+			for (int j=0;j<productosVendidos.size();j++) {
+				if(productosVendidos.get(j).getVentas()>venta) {
+					x=j;
+					venta=productosVendidos.get(j).getVentas();
+				}
 			}
+			topMasVendidos.add(productosVendidos.get(x));
+			productosVendidos.remove(productosVendidos.get(x));
 		}
-		topMasVendidos.add(productosVendidos.get(x));
-		topMasVendidos.remove(productosVendidos.get(x));
 	}
+	
 	for(int i=0; i<productosT.size();i++) {
 		productosT.get(i).setVentas();
 	}
