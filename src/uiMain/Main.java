@@ -69,53 +69,8 @@ public class Main {
 		            	break;
 		                     
 		            case 7:  
-		            	System.out.println("Ingrese la fecha inicial: ");
-		            	System.out.println("ejemplo(12/11/2020)");
-		            	String fecha1 = entrada.next();
+		            	Mercanciainactiva();
 		            	
-		            	System.out.println("Ingrese la fecha final: ");
-		            	System.out.println("ejemplo(20/11/2020)");
-		            	String fecha2 = entrada.next();
-		            	
-		            	String [] fecha_1 = fecha1.split("/"); 
-		            	String [] fecha_2 = fecha2.split("/");
-		            	
-		            	if(Integer.parseInt(fecha_1[2])==Integer.parseInt(fecha_2[2])&&Integer.parseInt(fecha_1[1])==Integer.parseInt(fecha_2[1])&&Integer.parseInt(fecha_1[0])<Integer.parseInt(fecha_2[0])) {
-		            		
-		            		if(!Factura.rangoDeFacturas(fecha1, fecha2).isEmpty()) {
-		            			ArrayList<Producto> Productos = Usuario.mercanciaMuerta(fecha1, fecha2);
-		            			
-		            			if(!Productos.isEmpty()) {
-		            				System.out.println("Nombre   Codido de barras   Cantidad");
-				            		for (int i = 0; i < Productos.size(); i++) {
-										System.out.println(Productos.get(i).toString());
-		            			}
-									}else {
-										System.out.println("No hay suficientes productos vendidos");
-									}
-			            		}else {
-			            			System.out.println("No hay facturas realizadas en el rango de tiempo pedido");
-			            		}
-		            		
-		            		
-		            		
-		            	}else if(Integer.parseInt(fecha_1[2])==Integer.parseInt(fecha_2[2])&&Integer.parseInt(fecha_1[1])<Integer.parseInt(fecha_2[1])) {
-		            		
-		            		if(!Factura.rangoDeFacturas(fecha1, fecha2).isEmpty()) {
-		            			ArrayList<Producto> Productos = Usuario.mercanciaMuerta(fecha1, fecha2);
-			            		System.out.println("Nombre   Codido de barras   Cantidad");
-			            		for (int i = 0; i < Productos.size(); i++) {
-									System.out.println(Productos.get(i).toString());
-									}
-			            		}else {
-			            			System.out.println("No hay facturas realizadas en el rango de tiempo pedido");
-			            		}
-		            		
-		            	}else {
-		            		System.out.println("El rango de las fechas no es correcto");
-		            	}
-		            	
-		                     break;
 		            case 8:  
 		            	
 		            	/*ingrese fecha(mes o año)
@@ -460,5 +415,51 @@ public class Main {
 			System.out.println("No hay clientes suficientes para esta funcion");
 		}
 	}
-
+	static void Mercanciainactiva() {
+		System.out.println("Ingrese la fecha inicial: ");
+    	System.out.println("ejemplo(12/11/2020)");
+    	String fecha1 = entrada.next();
+    	
+    	System.out.println("Ingrese la fecha final: ");
+    	System.out.println("ejemplo(20/11/2020)");
+    	String fecha2 = entrada.next();
+    	
+    	String [] fecha_1 = fecha1.split("/"); 
+    	String [] fecha_2 = fecha2.split("/");
+    	
+    	if(Integer.parseInt(fecha_1[2])==Integer.parseInt(fecha_2[2])&&Integer.parseInt(fecha_1[1])==Integer.parseInt(fecha_2[1])&&Integer.parseInt(fecha_1[0])<Integer.parseInt(fecha_2[0])) {
+    		
+    		if(!Factura.rangoDeFacturas(fecha1, fecha2).isEmpty()) {
+    			ArrayList<Producto> Productos = Usuario.mercanciaMuerta(fecha1, fecha2);
+    			
+    			if(!Productos.isEmpty()) {
+    				System.out.println("Nombre   Codido de barras   Cantidad");
+            		for (int i = 0; i < Productos.size(); i++) {
+						System.out.println(Productos.get(i).toString());
+    			}
+					}else {
+						System.out.println("No hay suficientes productos vendidos");
+					}
+        		}else {
+        			System.out.println("No hay facturas realizadas en el rango de tiempo pedido");
+        		}
+    		
+    		
+    		
+    	}else if(Integer.parseInt(fecha_1[2])==Integer.parseInt(fecha_2[2])&&Integer.parseInt(fecha_1[1])<Integer.parseInt(fecha_2[1])) {
+    		
+    		if(!Factura.rangoDeFacturas(fecha1, fecha2).isEmpty()) {
+    			ArrayList<Producto> Productos = Usuario.mercanciaMuerta(fecha1, fecha2);
+        		System.out.println("Nombre   Codido de barras   Cantidad");
+        		for (int i = 0; i < Productos.size(); i++) {
+					System.out.println(Productos.get(i).toString());
+					}
+        		}else {
+        			System.out.println("No hay facturas realizadas en el rango de tiempo pedido");
+        		}
+    		
+    	}else {
+    		System.out.println("El rango de las fechas no es correcto");
+    	}
+	}
 }
