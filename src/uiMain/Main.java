@@ -70,7 +70,7 @@ public class Main {
 		                     
 		            case 7:  
 		            	Mercanciainactiva();
-		            	
+		            	break;
 		            case 8:  
 		            	
 		            	/*ingrese fecha(mes o año)
