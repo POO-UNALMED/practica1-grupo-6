@@ -35,7 +35,8 @@ public class Usuario {
 	
 	static public ArrayList<Cliente> clientesMayoritarios() {
 		ArrayList<Cliente> MayorCliente = Cliente.getClientes();
-		ArrayList<Cliente> TopFinal = new ArrayList<Cliente>(); 
+		ArrayList<Cliente> TopFinal = new ArrayList<Cliente>();
+		
 		for (int i = 0;i < 3;i++) {
 			long compra = 0;
 			int x=0;
