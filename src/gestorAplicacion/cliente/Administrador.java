@@ -1,14 +1,14 @@
 package gestorAplicacion.cliente;
 import gestorAplicacion.factura.*;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import gestorAplicacion.factura.DetallePedido;
-import gestorAplicacion.factura.Factura;
-import gestorAplicacion.factura.Pedido;
-import gestorAplicacion.factura.Producto;
 
-public class Administrador extends Persona {
+
+public class Administrador extends Persona  {
+	
 	private double salario;
 	private String profesion;
 	static private ArrayList<Administrador>administradores=new ArrayList();

@@ -1,10 +1,11 @@
 package gestorAplicacion.factura;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 import gestorAplicacion.cliente.Cliente;
 
-public class Pedido {
+public class Pedido implements Serializable {
 	private ArrayList<String> productos = new ArrayList<String>();
 	private ArrayList<DetallePedido> DetalleProductos = new ArrayList<DetallePedido>();
 	private static ArrayList<Pedido> pedido = new ArrayList<Pedido>();

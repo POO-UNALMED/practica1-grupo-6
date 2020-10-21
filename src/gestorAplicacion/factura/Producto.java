@@ -1,10 +1,11 @@
 package gestorAplicacion.factura;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 import gestorAplicacion.cliente.Cliente;
 
-public class Producto {
+public class Producto implements Serializable{
 	
 	private int ventas;
 	private String nombre;

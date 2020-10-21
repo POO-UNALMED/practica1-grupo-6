@@ -1,8 +1,9 @@
 package gestorAplicacion.factura;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class DetallePedido {
+public class DetallePedido implements Serializable{
 	
 	private int id;
 	private int Cantidad;

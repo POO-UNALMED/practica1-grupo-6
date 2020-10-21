@@ -1,9 +1,10 @@
 package gestorAplicacion.factura;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import gestorAplicacion.cliente.Cliente;
 
-public class Factura {
+public class Factura implements Serializable{
 	private String Fecha;
 	private int Nfactura;
 	private static int Numfactura=110;
