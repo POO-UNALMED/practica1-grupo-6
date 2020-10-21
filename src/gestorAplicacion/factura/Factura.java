@@ -22,6 +22,11 @@ public class Factura implements Serializable{
 		Numfactura++;
 		Facturas.add(this);
 	}
+	
+	public static ArrayList<Factura> getLFacturas(){
+		return Facturas;
+	}
+	
 	public String getFecha() {
 		return Fecha;
 	}

@@ -16,7 +16,11 @@ public class Pedido implements Serializable {
 	private double totalPago;
 	
 	
-
+	public static ArrayList<Pedido> getLpedidos(){
+		return pedido;
+	}
+	
+	
 	public Pedido() {
 		this.num_pedido=Npedido;
 		Npedido++;

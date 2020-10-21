@@ -3,6 +3,8 @@ package gestorAplicacion.factura;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import gestorAplicacion.cliente.Cliente;
+
 public class DetallePedido implements Serializable{
 	
 	private int id;
@@ -22,7 +24,9 @@ public class DetallePedido implements Serializable{
 		Detalles.add(this);
 		id1++;
 	}
-
+	public static ArrayList<DetallePedido> getDetallePedido(){
+		return Detalles;
+	}
 	public int getId() {
 		return id;
 	}
