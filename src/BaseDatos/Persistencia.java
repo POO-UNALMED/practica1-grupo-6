@@ -7,7 +7,7 @@ import gestorAplicacion.cliente.Administrador;
 
 public class Persistencia {
 	public static void guardarArchivos (){
-		File Adminis = new File("/temp/administradores.txt");
+		File Adminis = new File("src\\BaseDatos\\temp\\Administradores.txt");
 		if(!Adminis.exists()) {
 			try {
 				Adminis.createNewFile();
