@@ -1,6 +1,8 @@
 package uiMain;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import BaseDatos.Persistencia;
 import gestorAplicacion.cliente.*;
 import gestorAplicacion.factura.*;
 
@@ -84,6 +86,8 @@ public class Main {
 		        
 			
 		}while(numero!=0);
+		
+		Persistencia.guardarArchivos();
       
 
 	}

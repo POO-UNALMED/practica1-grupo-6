@@ -22,7 +22,9 @@ public class Administrador extends Persona  {
 		this.profesion = profesion;
 		administradores.add(this);
 	}
-	
+	public static ArrayList<Administrador> getAdministradores() {
+		return administradores;
+	}
 	public double getSalario() {
 		return salario;
 	}
