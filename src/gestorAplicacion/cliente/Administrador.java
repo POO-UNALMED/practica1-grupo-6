@@ -55,7 +55,7 @@ public class Administrador extends Persona  {
 		StringBuffer lista=new StringBuffer ("lista administradores \n");
 		while(iterator.hasNext()) {
 			Administrador admin =(Administrador) iterator.next();
-			lista.append(admin.toString());
+			lista.append(admin.toString()+"\n");
 
 		}
 		return lista.toString();

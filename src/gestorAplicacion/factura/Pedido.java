@@ -104,7 +104,7 @@ public class Pedido implements Serializable {
 		StringBuffer lista=new StringBuffer ("Nombre   Codigo  CodidoDetalle  Cantidad \n");
 		while(iterator.hasNext()) {
 			DetallePedido producto =(DetallePedido) iterator.next();
-			lista.append(producto.toString());
+			lista.append(producto.toString()+"\n");
 
 		}
 		return lista.toString();

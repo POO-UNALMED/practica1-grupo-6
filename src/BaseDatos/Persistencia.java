@@ -173,6 +173,7 @@ public class Persistencia {
 		}catch(Exception e) {
 			System.out.println("No se pudo leer el archivo");
 		}
+		
 		//
 		
 		if(!cl.exists()) {

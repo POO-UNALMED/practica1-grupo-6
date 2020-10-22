@@ -49,7 +49,7 @@ public class Cliente extends Persona{
 		StringBuffer lista=new StringBuffer ("lista clientes \n");
 		while(iterator.hasNext()) {
 			Cliente cliente1 =(Cliente) iterator.next();
-			lista.append(cliente1.toString());
+			lista.append(cliente1.toString()+"\n");
 
 		}
 		return lista.toString();

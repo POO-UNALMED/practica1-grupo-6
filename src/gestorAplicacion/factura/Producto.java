@@ -110,7 +110,7 @@ public class Producto implements Serializable{
 		StringBuffer lista=new StringBuffer ("Nombre  Codigo  Cantidad \n");
 		while(iterator.hasNext()) {
 			Producto producto =(Producto) iterator.next();
-			lista.append(producto.toString());
+			lista.append(producto.toString()+"\n");
 
 		}
 		return lista.toString();
