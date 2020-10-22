@@ -6,17 +6,21 @@ import BaseDatos.Persistencia;
 import gestorAplicacion.cliente.*;
 import gestorAplicacion.factura.*;
 
+
+
+
 public class Main {
 	
 	static Scanner entrada = new Scanner(System.in);
+	static {
+		Persistencia.leerArchivos();
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		
 	    int numero;
-		
-		Administrador admin = new Administrador("carlos", 11111, "car@ht.com", "carrera 3", "32234", "masculino", 10000.0, "tecnico" );
 		
 		do {
 			
@@ -35,7 +39,7 @@ public class Main {
 			
 			numero = entrada.nextInt();
 			
-			  String marco;
+	
 		         
 		        switch (numero) 
 		        {
@@ -84,7 +88,7 @@ public class Main {
 		            	crearAdmin();
 		            	break;
 		         
-		            default: marco = "numero invalido";
+		            default: System.out.println("opcion no valida");;
 		                     break;
 		        }
 		        
