@@ -141,6 +141,30 @@ public class Persistencia {
 			System.out.println("Se ha generado un error en escritura producto1");
 		}
 	}
+	
+	public static void leerArchivos() {
+		ObjectInputStream leer;
+		File Admin = new File("src\\BaseDatos\\temp\\Administradores.txt");
+		if(!Admin.exists()) {
+			try {
+				Admin.createNewFile();
+				
+			}catch(Exception e) {
+				System.out.println("No se pudo crear el archivo");
+			}
+		}
+		
+		try {
+			
+			leer = new ObjectInputStream(new FileInputStream(Admin));
+			@SuppressWarnings("unchecked")
+			ArrayList<Administrador> Admins = (ArrayList<Administrador>) leer.readObject();
+			Administrador.setAdministradores(Admins);
+			
+		}catch(Exception e) {
+			System.out.println("No se pudo leer el archivo");
+		}
+	}
 }
 
 

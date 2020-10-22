@@ -95,6 +95,10 @@ public class Administrador extends Persona  {
 		}
 	}
 	
+	public static void setAdministradores(ArrayList<Administrador> administradores) {
+		Administrador.administradores = administradores;
+	}
+	
 	
 	
 	
