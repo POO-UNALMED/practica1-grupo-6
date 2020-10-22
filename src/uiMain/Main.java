@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-
+		
 	    int numero;
 		
 		Administrador admin = new Administrador("carlos", 11111, "car@ht.com", "carrera 3", "32234", "masculino", 10000.0, "tecnico" );
@@ -30,6 +30,7 @@ public class Main {
 			System.out.println("7.Mercancia inactiva");
 			System.out.println("8.Balances");
 			System.out.println("9.Productos mas vendidos");
+			System.out.println("10.Crear administrador");
 			System.out.println("0.Salir");
 			
 			numero = entrada.nextInt();
@@ -78,6 +79,9 @@ public class Main {
 		            	break;
 		            case 9:  
 		            	productosMasVendidos();
+		            	break;
+		            case 10:  
+		            	crearAdmin();
 		            	break;
 		         
 		            default: marco = "numero invalido";
@@ -417,6 +421,8 @@ public class Main {
     	
 	}
 	
+	
+	
 	static void productosMasVendidos() {
 		System.out.println("Ingrese la fecha inicial: ");
     	System.out.println("ejemplo(12/11/2020)");
@@ -469,6 +475,36 @@ public class Main {
     		System.out.println("El rango de las fechas no es correcto");
     	}
         
+	}
+	
+	static void crearAdmin() {
+		
+			System.out.println("Ingrese nombre administrador: ");
+	    	String nombre= entrada.next();
+	    	
+	    	System.out.println("Ingrese identificacion:");
+	    	int  id= entrada.nextInt();
+	    	
+	    	System.out.println("Ingrese correo:");
+	    	String correo= entrada.next();
+	    	
+	    	System.out.println("Ingrese direccion:");
+	    	String direcion= entrada.next();
+	    	
+	    	System.out.println("Ingrese telefono:");
+	    	String telefono= entrada.next();
+	    	
+	    	System.out.println("Ingrese genero:");
+	    	String genero=entrada.next();
+	    	
+	    	System.out.println("Ingrese salario:");
+	    	double salario= entrada.nextDouble();
+	    	
+	    	System.out.println("Ingrese profesion:");
+	    	String pr= entrada.next();
+	    	
+	    	Usuario.registrarAdmin(nombre,id,correo,direcion,telefono,genero,salario,pr);
+	
 	}
 	
 }
