@@ -3,6 +3,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import gestorAplicacion.cliente.Administrador;
 import gestorAplicacion.cliente.Cliente;
 
 public class Pedido implements Serializable {
@@ -137,6 +138,9 @@ public class Pedido implements Serializable {
 		return total;
 	}
 
+	public static void setPedido(ArrayList<Pedido> pedido) {
+		Pedido.pedido = pedido;
+	}
 
 	
 	

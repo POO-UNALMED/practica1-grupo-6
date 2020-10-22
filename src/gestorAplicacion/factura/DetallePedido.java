@@ -3,6 +3,7 @@ package gestorAplicacion.factura;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import gestorAplicacion.cliente.Administrador;
 import gestorAplicacion.cliente.Cliente;
 
 public class DetallePedido implements Serializable{
@@ -79,5 +80,8 @@ public class DetallePedido implements Serializable{
 		modificarCantidad(Cantidad);
 	}
 	
+	public static void setDpedido(ArrayList<DetallePedido> detallePedido) {
+		DetallePedido.Detalles = detallePedido;
+	}
 
 }

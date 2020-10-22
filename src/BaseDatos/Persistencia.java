@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import gestorAplicacion.cliente.Administrador;
 import gestorAplicacion.cliente.Cliente;
 import gestorAplicacion.factura.DetallePedido;
+import gestorAplicacion.factura.Factura;
 import gestorAplicacion.factura.Pedido;
 import gestorAplicacion.factura.Producto;
 
@@ -92,7 +93,7 @@ public class Persistencia {
 		}
 		try {
 			escribir =new ObjectOutputStream(new FileOutputStream(factura1));
-			ArrayList<DetallePedido> mostrarfactura1 = DetallePedido.getDetallePedido();
+			ArrayList<Factura> mostrarfactura1 = Factura.getLFacturas();
 			escribir.writeObject(mostrarfactura1);
 			escribir.close();
 			
@@ -142,9 +143,17 @@ public class Persistencia {
 		}
 	}
 	
+	
+	
+	
 	public static void leerArchivos() {
 		ObjectInputStream leer;
 		File Admin = new File("src\\BaseDatos\\temp\\Administradores.txt");
+		File cl = new File("src\\BaseDatos\\temp\\Clientes.txt");
+		File dtpedido2 = new File("src\\BaseDatos\\temp\\DetallePedido.txt");
+		File factura2 = new File("src\\BaseDatos\\temp\\Factura.txt");
+		File Pedido2 = new File("src\\BaseDatos\\temp\\Pedido.txt");
+		File producto2 = new File("src\\BaseDatos\\temp\\Producto.txt");
 		if(!Admin.exists()) {
 			try {
 				Admin.createNewFile();
@@ -164,6 +173,122 @@ public class Persistencia {
 		}catch(Exception e) {
 			System.out.println("No se pudo leer el archivo");
 		}
+		//
+		
+		if(!cl.exists()) {
+			try {
+				cl.createNewFile();
+				
+			}catch(Exception e) {
+				System.out.println("No se pudo crear el archivo");
+			}
+		}
+		
+		try {
+			
+			leer = new ObjectInputStream(new FileInputStream(cl));
+			@SuppressWarnings("unchecked")
+			ArrayList<Cliente> cliente = (ArrayList<Cliente>) leer.readObject();
+			Cliente.setCliente(cliente);
+			leer.close();
+			
+		}catch(Exception e) {
+			System.out.println("No se pudo leer el archivo");
+		}
+		
+		//
+		
+		if(!dtpedido2.exists()) {
+			try {
+				dtpedido2.createNewFile();
+				
+			}catch(Exception e) {
+				System.out.println("No se pudo crear el archivo");
+			}
+		}
+		
+		try {
+			
+			leer = new ObjectInputStream(new FileInputStream(dtpedido2));
+			@SuppressWarnings("unchecked")
+			ArrayList<DetallePedido> detallePedido = (ArrayList<DetallePedido>) leer.readObject();
+			DetallePedido.setDpedido(detallePedido);
+			leer.close();
+			
+		}catch(Exception e) {
+			System.out.println("No se pudo leer el archivo");
+		}
+		
+		//
+		
+		if(!factura2.exists()) {
+			try {
+				factura2.createNewFile();
+				
+			}catch(Exception e) {
+				System.out.println("No se pudo crear el archivo");
+			}
+		}
+		
+		try {
+			
+			leer = new ObjectInputStream(new FileInputStream(factura2));
+			@SuppressWarnings("unchecked")
+			ArrayList<Factura> fact = (ArrayList<Factura>) leer.readObject();
+			Factura.setFacturas(fact);
+			leer.close();
+			
+		}catch(Exception e) {
+			System.out.println("No se pudo leer el archivo");
+		}
+		
+		//
+		
+		if(!Pedido2.exists()) {
+			try {
+				Pedido2.createNewFile();
+				
+			}catch(Exception e) {
+				System.out.println("No se pudo crear el archivo");
+			}
+		}
+		
+		try {
+			
+			leer = new ObjectInputStream(new FileInputStream(Pedido2));
+			@SuppressWarnings("unchecked")
+			ArrayList<Pedido> pedido = (ArrayList<Pedido>) leer.readObject();
+			Pedido.setPedido(pedido);
+			leer.close();
+			
+		}catch(Exception e) {
+			System.out.println("No se pudo leer el archivo");
+		}
+		
+		//
+		
+		if(!producto2.exists()) {
+			try {
+				producto2.createNewFile();
+				
+			}catch(Exception e) {
+				System.out.println("No se pudo crear el archivo");
+			}
+		}
+		
+		try {
+			
+			leer = new ObjectInputStream(new FileInputStream(producto2));
+			@SuppressWarnings("unchecked")
+			ArrayList<Producto> producto = (ArrayList<Producto>) leer.readObject();
+			Producto.setProducto(producto);
+			leer.close();
+			
+		}catch(Exception e) {
+			System.out.println("No se pudo leer el archivo");
+		}
+		
+		
 	}
 }
 

@@ -2,6 +2,7 @@ package gestorAplicacion.factura;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import gestorAplicacion.cliente.Administrador;
 import gestorAplicacion.cliente.Cliente;
 
 public class Factura implements Serializable{
@@ -93,4 +94,7 @@ public class Factura implements Serializable{
 		return cliente;
 	}
 	
+	public static void setFacturas(ArrayList<Factura> facturas) {
+		Factura.Facturas = facturas;
+	}
 }

@@ -85,6 +85,9 @@ public class Cliente extends Persona{
 		return clientes;
 	}
 	
+	public static void setCliente(ArrayList<Cliente> clientes) {
+		Cliente.clientes= clientes;
+	}
 	
 	
 }

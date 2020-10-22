@@ -3,6 +3,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import gestorAplicacion.cliente.Administrador;
 import gestorAplicacion.cliente.Cliente;
 
 public class Producto implements Serializable{
@@ -123,5 +124,9 @@ public class Producto implements Serializable{
 	}
 	public void setVentas() {
 		ventas= 0;
+	}
+	
+	public static void setProducto(ArrayList<Producto> producto) {
+		Producto.productos= producto;
 	}
 }
