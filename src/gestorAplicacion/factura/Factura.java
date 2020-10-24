@@ -7,7 +7,7 @@ import gestorAplicacion.cliente.Cliente;
 
 public class Factura implements Serializable{
 	private String Fecha;
-	private int Nfactura;
+	private final int Nfactura;
 	private static int Numfactura=110;
 	private Pedido pedido;
 	private Cliente cliente;

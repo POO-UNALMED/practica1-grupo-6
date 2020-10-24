@@ -50,7 +50,7 @@ public class Administrador extends Persona  {
 		return p;
 	}
 	
-	public String listaAdmin() {
+	public String listaObjetos() {
 		Iterator<Administrador> iterator= administradores.iterator();
 		StringBuffer lista=new StringBuffer ("lista administradores \n");
 		while(iterator.hasNext()) {

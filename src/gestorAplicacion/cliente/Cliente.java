@@ -44,7 +44,7 @@ public class Cliente extends Persona{
 	}
 
 	
-	public String listaClientes() {
+	public String listaObjetos() {
 		Iterator<Cliente> iterator= clientes.iterator();
 		StringBuffer lista=new StringBuffer ("lista clientes \n");
 		while(iterator.hasNext()) {

@@ -2,14 +2,14 @@ package gestorAplicacion.cliente;
 
 import java.io.Serializable;
 
-public class Persona implements Serializable{
+public abstract class Persona implements Serializable{
 	
 	private static final long serialVersionUID = -1L;
-	private String nombre;
-	private int identificacion;
-	private String correo;
-	private String Direccion;
-	private String Telefono;
+	protected String nombre;
+	protected final int identificacion;
+	protected String correo;
+	protected String Direccion;
+	protected String Telefono;
 	
 	
 	public Persona(String nombre, int identificacion, String correo, String direccion, String telefono,
@@ -52,5 +52,6 @@ public class Persona implements Serializable{
 		return genero;
 	}
 	
+	public abstract String listaObjetos();
 	
 }

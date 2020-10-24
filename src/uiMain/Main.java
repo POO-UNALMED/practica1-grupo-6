@@ -43,38 +43,25 @@ public class Main {
 		         
 		        switch (numero) 
 		        {
-		            case 1:
-		            	
-		            	registrarCliente();
-		            	
+		            case 1:		            	
+		            	registrarCliente();		            	
 		                     break;
 		            case 2:  	            	
-		            	
 		            	registrarProducto();
-		            	
 		                     break;
 		            case 3: 
-		            	
 		            	crearPedido();
-		            	
 		                     break;
 		            case 4: 
 		            	/*condicional*/
 		            	inventario();
-		            	
 		            	break;
 		            case 5:  
-		            	
 		            	realizarDevolucion();
-		            	
-		            	break;
-		                    
+		            	break;    
 		            case 6:
-		            	
 		            	clientesMayoritarios();
-		            			
-		            	break;
-		                     
+		            	break;      
 		            case 7:  
 		            	Mercanciainactiva();
 		            	break;
@@ -86,6 +73,9 @@ public class Main {
 		            	break;
 		            case 10:  
 		            	crearAdmin();
+		            	break;
+		            case 0:
+		            	System.out.println("Saliendo...");
 		            	break;
 		         
 		            default: System.out.println("opcion no valida");;

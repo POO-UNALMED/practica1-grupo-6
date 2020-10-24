@@ -17,7 +17,7 @@ public class Usuario {
 			if(dp != null) {
 				
 				if(dp.modificarCantidad(cantidad)){
-					d1.agregarFactura(d1);
+					p.totalPago();
 					return "Devolucion exitosa";
 				}
 				else {
