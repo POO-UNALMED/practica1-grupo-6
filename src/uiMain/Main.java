@@ -223,7 +223,7 @@ public class Main {
             		default:
             			System.out.println("opcion no valida");
             		}
-        		}while(op!=1||op!=2);
+        		}while(op!=1&&op!=2);
         		
        
         		if(conf) {//se crea la factura
@@ -498,7 +498,7 @@ public class Main {
 	    	System.out.println("Ingrese profesion:");
 	    	String pr= entrada.next();
 	    	
-	    	Usuario.registrarAdmin(nombre,id,correo,direcion,telefono,genero,salario,pr);
+	    	System.out.println(Usuario.registrarAdmin(nombre,id,correo,direcion,telefono,genero,salario,pr));
 	
 	}
 	

@@ -13,7 +13,7 @@ public class Pedido implements Serializable {
 	private ArrayList<String> productos = new ArrayList<String>();
 	private ArrayList<DetallePedido> DetalleProductos = new ArrayList<DetallePedido>();
 	private static ArrayList<Pedido> pedido = new ArrayList<Pedido>();
-	private int num_pedido;
+	private final int num_pedido;
 	private static int Npedido=1001;
 	private boolean estado;
 	private Factura factura;

@@ -177,9 +177,18 @@ static public String agregarInventario(Administrador admin,long codigo, int cant
 	return admin.agregarInventario(codigo, cantidad);
 }
 
-static public void registrarAdmin(String nombre, int identificacion, String correo, String direccion, String telefono,
+static public String registrarAdmin(String nombre, int identificacion, String correo, String direccion, String telefono,
 		String gener, double salario, String profesion) {
 		new Administrador(nombre, identificacion, correo, direccion, telefono, gener,salario,profesion);
+		
+		if(Administrador.consultarAdmin(identificacion)==null) {
+			new Administrador(nombre, identificacion, correo, direccion, telefono, gener,salario,profesion);
+			return "Administrador registrado exitosamente";
+			
+		}else {
+			return "Administrador ya registrado!!!";
+			
+		}
 }
 
 }
