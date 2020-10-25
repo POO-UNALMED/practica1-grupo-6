@@ -171,7 +171,7 @@ public class Main {
         			
         			switch (opcion) {
         			case 1:
-        				if(!Producto.getProductos().isEmpty()) {
+        				if(!Producto.getProductos().isEmpty()) { 			//se confirma que hayan productos en el inventario 
         					System.out.println("Ingrese codigo del producto: ");
         					long codigo = entrada.nextLong();
         					
@@ -185,7 +185,7 @@ public class Main {
         				break;
         			case 2:
         				System.out.println(p.listaProductos());
-        				if(!p.getDetalleProductos().isEmpty()) {
+        				if(!p.getDetalleProductos().isEmpty()) {			
         					System.out.println("Ingrese codigo de detalle: ");
         					int codigoDetalle = entrada.nextInt();	            					
         					p.quitar_producto(codigoDetalle);
@@ -252,7 +252,7 @@ public class Main {
         	}
         	
         	else {
-        		System.out.println(Producto.listaProductos());
+        		System.out.println(Producto.listaProductos());				//se muestra el inventario 
             	
         		System.out.println("Ingrese una opcion");
     			System.out.println("1.editar inventario");
@@ -281,14 +281,16 @@ public class Main {
 	
 	static void realizarDevolucion() {
 		System.out.println("Ingrese Identificacion: ");
-    	int identificacion_2= entrada.nextInt();
+    	int identificacion_2= entrada.nextInt(); 	
     	Cliente devolucion = Cliente.consultarCliente(identificacion_2);
+    	
     	if(devolucion!=null) {
     		System.out.println(devolucion.listaFactura());
     		System.out.println("Ingrese codigo de Factura ");
     		int Nfactura  = entrada.nextInt();
     		Factura consulta = Factura.consultarFactura(Nfactura);
-    		if(consulta!=null) {
+    		
+    		if(consulta!=null) {												//verifica que exista la factura
     			System.out.println(consulta.getPedido().listaProductos());
     			System.out.println("Ingrese el codigo del producto: ");
     			int codigoPro = entrada.nextInt();
