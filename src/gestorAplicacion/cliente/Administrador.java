@@ -66,7 +66,7 @@ public class Administrador extends Persona  {
 	
 	public String registrarProducto(String nombre, String marca, String tipo, int cantidad, double precio_referencia) {
 		Producto producto = new Producto(nombre,marca,tipo,cantidad,precio_referencia);
-		return "Producto registrdo exitosamente";
+		return "Producto registrado exitosamente";
 	}
 	public String registrarCliente(String nombre, int identificacion, String correo, String direccion, String telefono,
 			String genero) {
