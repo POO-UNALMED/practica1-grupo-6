@@ -52,8 +52,7 @@ public class Main {
 		            case 3: 
 		            	crearPedido();
 		                     break;
-		            case 4: 
-		            	/*condicional*/
+		            case 4:
 		            	inventario();
 		            	break;
 		            case 5:  

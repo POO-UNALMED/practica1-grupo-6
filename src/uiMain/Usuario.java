@@ -1,3 +1,5 @@
+
+
 package uiMain;
 
 import java.util.ArrayList;
@@ -8,7 +10,7 @@ import gestorAplicacion.factura.*;
 
 public class Usuario {
 	
-	 static public String devolucion(int codFac, int codProd, int cantidad) {
+	 static public String devolucion(int codFac, int codProd, int cantidad) {        //
 		Factura d1 = Factura.consultarFactura(codFac);
 		if(d1 != null) {
 			Pedido p = d1.getPedido();

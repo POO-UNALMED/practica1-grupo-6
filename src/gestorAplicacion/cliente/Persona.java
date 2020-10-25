@@ -1,16 +1,18 @@
+// Esta clase es una clase abstracta, que genera un metodo abstracto
+
 package gestorAplicacion.cliente;
 
-import java.io.Serializable;
+import java.io.Serializable;																			//entrada y salida de datos
 
 public abstract class Persona implements Serializable{
 	
-	private static final long serialVersionUID = -1L;
+	private static final long serialVersionUID = -1L;													//huella del objeto al momento de serializarse
 	protected String nombre;
 	protected final int identificacion;
 	protected String correo;
 	protected String Direccion;
 	protected String Telefono;
-	
+	protected String genero;
 	
 	public Persona(String nombre, int identificacion, String correo, String direccion, String telefono,
 			String genero) {
@@ -30,7 +32,7 @@ public abstract class Persona implements Serializable{
 	}
 
 
-	private String genero;
+	
 	
 	
 	public String getNombre() {
@@ -52,6 +54,6 @@ public abstract class Persona implements Serializable{
 		return genero;
 	}
 	
-	public abstract String listaObjetos();
+	public abstract String listaObjetos();					//generar la lista de objetos
 	
 }

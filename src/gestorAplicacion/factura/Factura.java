@@ -1,3 +1,5 @@
+// Esta clase se  encarga de generar la factura  y tambien consulta de facturas.
+
 package gestorAplicacion.factura;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -64,7 +66,7 @@ public class Factura implements Serializable{
 		return Fecha +" "+ Nfactura;
 	}
 	
-	public static ArrayList<Factura> rangoDeFacturas(String fecha1,String fecha2){
+	public static ArrayList<Factura> rangoDeFacturas(String fecha1,String fecha2){					//recibe dos fechas en el formato(dia/mes/año) 
 		String [] fecha_1= fecha1.split("/");
 		String [] fecha_2= fecha2.split("/");
 		ArrayList<Factura> rangoDeFacturas = new ArrayList<>();
@@ -72,15 +74,15 @@ public class Factura implements Serializable{
 		for (int i = 0; i < Facturas.size(); i++) {
 			String [] fecha3=Facturas.get(i).Fecha.split("/");
 			
-			if((Integer.parseInt(fecha_1[2])==Integer.parseInt(fecha_2[2]))&&(Integer.parseInt(fecha_1[1])==Integer.parseInt(fecha_2[1]))) {
+			if((Integer.parseInt(fecha_1[2])==Integer.parseInt(fecha_2[2]))&&(Integer.parseInt(fecha_1[1])==Integer.parseInt(fecha_2[1]))) {		//se confirma que el año y el mes sean el mismo 
 				
-				if(Integer.parseInt(fecha3[0])>=Integer.parseInt(fecha_1[0])&&Integer.parseInt(fecha3[0])<=Integer.parseInt(fecha_2[0])) {
+				if(Integer.parseInt(fecha3[0])>=Integer.parseInt(fecha_1[0])&&Integer.parseInt(fecha3[0])<=Integer.parseInt(fecha_2[0])) {			//el dia de la fecha inicial no sea mayor al de fecha final 
 					rangoDeFacturas.add(Facturas.get(i));
 				}
 				
-			}else if ((Integer.parseInt(fecha_1[2])==Integer.parseInt(fecha_2[2]))&&(Integer.parseInt(fecha_1[1])!=Integer.parseInt(fecha_2[1]))) {
+			}else if ((Integer.parseInt(fecha_1[2])==Integer.parseInt(fecha_2[2]))&&(Integer.parseInt(fecha_1[1])!=Integer.parseInt(fecha_2[1]))) {  //que el año sea el mismo y mes diferente
 				
-				if(Integer.parseInt(fecha3[1])>=Integer.parseInt(fecha_1[1])&&Integer.parseInt(fecha3[1])<=Integer.parseInt(fecha_2[1])) {
+				if(Integer.parseInt(fecha3[1])>=Integer.parseInt(fecha_1[1])&&Integer.parseInt(fecha3[1])<=Integer.parseInt(fecha_2[1])) {			 //el mes de la fecha inicial no sea mayor al de la fecha final
 					rangoDeFacturas.add(Facturas.get(i));
 				}
 				

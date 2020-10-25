@@ -1,3 +1,6 @@
+// Esta clase se encarga de registrar clientes,productos,consultar cliente,crear pedido, agregar al inventario y guardar los administradores.
+
+
 package gestorAplicacion.cliente;
 import gestorAplicacion.factura.*;
 

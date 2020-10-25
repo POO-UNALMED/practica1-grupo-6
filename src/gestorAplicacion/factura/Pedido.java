@@ -1,3 +1,6 @@
+// Esta clase se encarga de guardar los datos necesarios para generar una factura
+
+
 package gestorAplicacion.factura;
 import java.io.Serializable;
 import java.util.ArrayList;

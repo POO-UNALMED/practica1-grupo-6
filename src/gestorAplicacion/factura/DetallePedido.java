@@ -1,3 +1,5 @@
+// Esta clase se encarga de guardar cada producto con su respectiva cantidad en un pedido
+
 package gestorAplicacion.factura;
 
 import java.io.Serializable;

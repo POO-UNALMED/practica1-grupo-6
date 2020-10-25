@@ -1,3 +1,5 @@
+// Esta clase se encarga de guardar clientes y compras
+
 package gestorAplicacion.cliente;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -44,7 +46,7 @@ public class Cliente extends Persona{
 	}
 
 	
-	public String listaObjetos() {
+	public String listaObjetos() {												
 		Iterator<Cliente> iterator= clientes.iterator();
 		StringBuffer lista=new StringBuffer ("lista clientes \n");
 		while(iterator.hasNext()) {

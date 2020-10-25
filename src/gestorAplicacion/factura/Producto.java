@@ -1,3 +1,5 @@
+// Esta clase es el inventario de la tienda y contiene los metodos como guardar y otros
+
 package gestorAplicacion.factura;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -20,7 +22,7 @@ public class Producto implements Serializable{
 	private ArrayList<DetallePedido> Detalles = new ArrayList<DetallePedido>();
 	private static ArrayList<Producto> productos = new ArrayList<Producto>();
 	
-	public Producto(String nombre, String marca, String tipo, int cantidad, double precio_referencia) {
+	public Producto(String nombre, String marca, String tipo, int cantidad, double precio_referencia) {		      
 		super();
 		this.nombre = nombre;
 		this.marca = marca;
@@ -69,7 +71,7 @@ public class Producto implements Serializable{
 		this.tipo = tipo;
 	}
 
-	public double getPrecio_venta() {
+	public double getPrecio_venta() {												//
 		return precio_venta;
 	}
 
@@ -116,13 +118,13 @@ public class Producto implements Serializable{
 		return lista.toString();
 	}
 	
-	public void setVentas(int can) {
+	public void setVentas(int can) {										//sobrecarga de metodos
 		ventas= can+ventas;
 	}
 	public int getVentas() {
 		return ventas;
 	}
-	public void setVentas() {
+	public void setVentas() {												//sobrecarga de metodos
 		ventas= 0;
 	}
 	

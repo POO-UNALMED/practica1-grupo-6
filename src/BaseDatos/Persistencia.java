@@ -11,7 +11,7 @@ import gestorAplicacion.factura.Pedido;
 import gestorAplicacion.factura.Producto;
 
 public class Persistencia {
-	public static void guardarArchivos (){
+	public static void guardarArchivos (){												
 		ObjectOutputStream escribir;
 		File Adminis = new File("src\\BaseDatos\\temp\\Administradores.txt");
 		File cl = new File("src\\BaseDatos\\temp\\Clientes.txt");
@@ -20,7 +20,7 @@ public class Persistencia {
 		File Pedido1 = new File("src\\BaseDatos\\temp\\Pedido.txt");
 		File producto1 = new File("src\\BaseDatos\\temp\\Producto.txt");
 		
-		if(!Adminis.exists() ) {
+		if(!Adminis.exists() ) {													//si no existe crea el archivo
 			try {
 				Adminis.createNewFile();
 				
@@ -31,7 +31,7 @@ public class Persistencia {
 			}
 		}
 		
-		try {
+		try {																		//Escribir en el archivo
 			escribir =new ObjectOutputStream(new FileOutputStream(Adminis));
 			ArrayList<Administrador> mostrarAdmin = Administrador.getAdministradores();
 			escribir.writeObject(mostrarAdmin);
@@ -154,24 +154,25 @@ public class Persistencia {
 		File factura2 = new File("src\\BaseDatos\\temp\\Factura.txt");
 		File Pedido2 = new File("src\\BaseDatos\\temp\\Pedido.txt");
 		File producto2 = new File("src\\BaseDatos\\temp\\Producto.txt");
-		if(!Admin.exists()) {
+		
+		if(!Admin.exists()) {												//si no existe , se crea el archivo
 			try {
-				Admin.createNewFile();
+				Admin.createNewFile();													
 				
 			}catch(Exception e) {
-				System.out.println("No se pudo crear el archivo");
+				System.out.println("Archivo no enconotrado");
 			}
 		}
 		
 		try {
 			
-			leer = new ObjectInputStream(new FileInputStream(Admin));
+			leer = new ObjectInputStream(new FileInputStream(Admin));							// si existe se lee el archivo
 			@SuppressWarnings("unchecked")
 			ArrayList<Administrador> Admins = (ArrayList<Administrador>) leer.readObject();
 			Administrador.setAdministradores(Admins);
 			
 		}catch(Exception e) {
-			System.out.println("No se pudo leer el archivo");
+			System.out.println("Archivo no enconotrado");
 		}
 		
 		//
@@ -181,7 +182,7 @@ public class Persistencia {
 				cl.createNewFile();
 				
 			}catch(Exception e) {
-				System.out.println("No se pudo crear el archivo");
+				System.out.println("Archivo no enconotrado");
 			}
 		}
 		
@@ -194,7 +195,7 @@ public class Persistencia {
 			leer.close();
 			
 		}catch(Exception e) {
-			System.out.println("No se pudo leer el archivo");
+			System.out.println("Archivo no enconotrado");
 		}
 		
 		//
@@ -204,7 +205,7 @@ public class Persistencia {
 				dtpedido2.createNewFile();
 				
 			}catch(Exception e) {
-				System.out.println("No se pudo crear el archivo");
+				System.out.println("Archivo no enconotrado");
 			}
 		}
 		
@@ -217,7 +218,7 @@ public class Persistencia {
 			leer.close();
 			
 		}catch(Exception e) {
-			System.out.println("No se pudo leer el archivo");
+			System.out.println("Archivo no enconotrado");
 		}
 		
 		//
@@ -227,7 +228,7 @@ public class Persistencia {
 				factura2.createNewFile();
 				
 			}catch(Exception e) {
-				System.out.println("No se pudo crear el archivo");
+				System.out.println("Archivo no enconotrado");
 			}
 		}
 		
@@ -240,7 +241,7 @@ public class Persistencia {
 			leer.close();
 			
 		}catch(Exception e) {
-			System.out.println("No se pudo leer el archivo");
+			System.out.println("Archivo no enconotrado");
 		}
 		
 		//
@@ -250,7 +251,7 @@ public class Persistencia {
 				Pedido2.createNewFile();
 				
 			}catch(Exception e) {
-				System.out.println("No se pudo crear el archivo");
+				System.out.println("Archivo no enconotrado");
 			}
 		}
 		
@@ -263,7 +264,7 @@ public class Persistencia {
 			leer.close();
 			
 		}catch(Exception e) {
-			System.out.println("No se pudo leer el archivo");
+			System.out.println("Archivo no enconotrado");
 		}
 		
 		//
@@ -273,7 +274,7 @@ public class Persistencia {
 				producto2.createNewFile();
 				
 			}catch(Exception e) {
-				System.out.println("No se pudo crear el archivo");
+				System.out.println("Archivo no enconotrado");
 			}
 		}
 		
@@ -286,7 +287,7 @@ public class Persistencia {
 			leer.close();
 			
 		}catch(Exception e) {
-			System.out.println("No se pudo leer el archivo");
+			System.out.println("Archivo no enconotrado");
 		}
 		
 		
