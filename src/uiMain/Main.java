@@ -24,6 +24,7 @@ public class Main {
 		
 		do {
 			
+			System.out.println("---------------------------");
 			System.out.println("      CompuElectronics ");
 			System.out.println("---------------------------");
 			System.out.println("Elija una opcion:");
