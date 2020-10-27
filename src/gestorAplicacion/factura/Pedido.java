@@ -63,7 +63,7 @@ public class Pedido implements Serializable {
 			double cant=p1.getCantidad();										/*cantidad de productos*/ 
 			Producto product=p1.getProducto();									/*producto X */
 			double valor=product.getPrecio_venta();								/*valor de venta de producto X*/
-			total= (cant*valor)+total;
+			total=total+ (cant*valor);
 		}
 		totalPago=total;
 	}
@@ -80,7 +80,7 @@ public class Pedido implements Serializable {
 			Factura factura = new Factura(fecha,this,cliente);
 			this.factura=factura;
 			this.estado=true;
-			this.totalPago();
+			totalPago();
 			return "Factura realizada";
 			
 		}else {

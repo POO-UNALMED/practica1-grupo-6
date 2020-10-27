@@ -262,6 +262,7 @@ public class Main {
             		String fecha = entrada.next();
             		p.crearFactura(conf, fecha, c);
         			System.out.println(p.getFactura().imprimirFactura());
+        			
         		}
         		
         	}else {
@@ -355,7 +356,7 @@ public class Main {
 			ArrayList <Cliente> Mayores = Usuario.clientesMayoritarios();
 			for(int i = 0;i < Mayores.size();i++) {
 				
-				System.out.println("Cliente "+ (i+1)+": " + Mayores.get(i)+" Compras= "+ Mayores.get(i).getCompras());
+				System.out.println("Cliente "+ (i+1)+": " + Mayores.get(i)+" Compras= "+ Mayores.get(i).totalCompras());
 				
 			}
 		}

@@ -104,7 +104,7 @@ public class Producto implements Serializable{
 	
 	@Override
 	public String toString() {
-		return  nombre + "---" +  codigo_de_barras + "---" + cantidad ;
+		return  nombre + "---" +  codigo_de_barras + "---" + cantidad;
 	}
 
 	public static String listaProductos() {

@@ -28,7 +28,7 @@ public class Cliente extends Persona{
 	public double totalCompras() {
 		double control=0;
 		for (int i = 0;i <listaFacturas.size();i++) {
-			control+=listaFacturas.get(i).getPedido().gettotalPago();
+			control=control+listaFacturas.get(i).getPedido().gettotalPago();
 		}
 		
 		return control;
