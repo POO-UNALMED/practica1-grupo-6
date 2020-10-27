@@ -24,18 +24,32 @@ public class Main {
 		
 		do {
 			
+			System.out.println("      CompuElectronics ");
+			System.out.println("---------------------------");
 			System.out.println("Elija una opcion:");
-			System.out.println("1.Registrar cliente");
-			System.out.println("2.Registrar Producto");
-			System.out.println("3.Crear Pedido");
-			System.out.println("4.inventario");	/*un sub menu...1 editar inventario 2 salir*/
-			System.out.println("5.Realizar devolucion");
-			System.out.println("6.Clientes mayoritarios");
-			System.out.println("7.Mercancia inactiva");
-			System.out.println("8.Balances");
-			System.out.println("9.Productos mas vendidos");
-			System.out.println("10.Crear administrador");
-			System.out.println("0.Salir");
+			System.out.println("---------------------------");
+			System.out.println("|1.Registrar cliente");
+			System.out.println("---------------------------");
+			System.out.println("|2.Registrar Producto");
+			System.out.println("---------------------------");
+			System.out.println("|3.Crear Pedido");
+			System.out.println("---------------------------");
+			System.out.println("|4.inventario");	/*un sub menu...1 editar inventario 2 salir*/
+			System.out.println("---------------------------");
+			System.out.println("|5.Realizar devolucion");
+			System.out.println("---------------------------");
+			System.out.println("|6.Clientes mayoritarios");
+			System.out.println("---------------------------");
+			System.out.println("|7.Mercancia inactiva");
+			System.out.println("---------------------------");
+			System.out.println("|8.Balances");
+			System.out.println("---------------------------");
+			System.out.println("|9.Productos mas vendidos");
+			System.out.println("---------------------------");
+			System.out.println("|10.Crear administrador");
+			System.out.println("---------------------------");
+			System.out.println("|0.Salir");
+			System.out.println("---------------------------");
 			
 			numero = entrada.nextInt();
 			
@@ -77,7 +91,7 @@ public class Main {
 		            	System.out.println("Programa finalizado correctamente.");
 		            	break;
 		         
-		            default: System.out.println("opcion no valida");;
+		            default: System.out.println("Opcion no valida");;
 		                     break;
 		        }
 		        
@@ -91,14 +105,16 @@ public class Main {
 	
 	static void registrarCliente() {
 		
-		System.out.println("ingrese su identificacion: ");
+		System.out.println("");
+		System.out.println("Ingrese identificacion del administrador: ");
+		System.out.println("");
 		int ident = entrada.nextInt();
 		Administrador admin = Administrador.consultarAdmin(ident);
 		if(admin!=null) {
-			System.out.println("Ingrese nombre cliente: ");
+			System.out.println("Ingrese nombre del cliente: ");
 	    	String nombre= entrada.next();
 	    	
-	    	System.out.println("Ingrese identificacion:");
+	    	System.out.println("Ingrese identificacion del cliente:");
 
 	    	int  id= entrada.nextInt();
 	    	
@@ -123,7 +139,9 @@ public class Main {
 	}
 	
 	static void registrarProducto() {
-		System.out.println("ingrese su identificacion: ");
+		System.out.println("");
+		System.out.println("Ingrese identificacion del administrador: ");
+		System.out.println("");
 		int ident = entrada.nextInt();
 		Administrador admin = Administrador.consultarAdmin(ident);
 		if(admin!=null) {
@@ -139,7 +157,7 @@ public class Main {
         	System.out.println("Ingrese cantidad:");
         	int cantidadp= entrada.nextInt();
         	
-        	System.out.println("Ingrese precio_referencia:");
+        	System.out.println("Ingrese precio: ");
         	double precio_referencia= entrada.nextDouble();
 	    	
 	    	System.out.println(Usuario.registrarProducto(admin, nombrep, marcap, tipop, cantidadp, precio_referencia));
@@ -150,11 +168,13 @@ public class Main {
 	}
 	
 	static void crearPedido() {
-		System.out.println("ingrese su identificacion: ");
+		System.out.println("");
+		System.out.println("Ingrese identificacion del administrador: ");
+		System.out.println("");
 		int ident = entrada.nextInt();
 		Administrador admin = Administrador.consultarAdmin(ident);
 		if(admin!=null) {
-			System.out.println("Ingrese id del cliente: ");
+			System.out.println("Ingrese identificacion del cliente: ");
         	
         	int identificacion= entrada.nextInt();
         	
@@ -163,10 +183,15 @@ public class Main {
         		Pedido p=Usuario.crearPedido(admin);
         		int opcion;
         		do {//se registran los productos
-        			System.out.println("Ingrese una opcion");
-        			System.out.println("1.Agregar Producto");
-        			System.out.println("2.Retirar Producto");
-        			System.out.println("3.Terminar Pedido");
+        			System.out.println("---------------------------");
+        			System.out.println("|Ingrese una opcion");
+        			System.out.println("---------------------------");
+        			System.out.println("|1.Agregar Producto");
+        			System.out.println("---------------------------");
+        			System.out.println("|2.Retirar Producto");
+        			System.out.println("---------------------------");
+        			System.out.println("|3.Terminar Pedido");
+        			System.out.println("---------------------------");
         			opcion=entrada.nextInt();
         			
         			switch (opcion) {
@@ -175,7 +200,7 @@ public class Main {
         					System.out.println("Ingrese codigo del producto: ");
         					long codigo = entrada.nextLong();
         					
-        					System.out.println("Ingrese cantidad a llevar");
+        					System.out.println("Ingrese cantidad a llevar: ");
         					int cantidad = entrada.nextInt();
         					
         					System.out.println(p.Agregar_producto(codigo, cantidad));
@@ -206,9 +231,13 @@ public class Main {
         		int op;
         		boolean conf=false;
         		do {// se confirma el pedido
-        			System.out.println("Ingrese una opcion: ");
-            		System.out.println("1.confirmar pedido");
-            		System.out.println("2.cancelar pedido");
+        			System.out.println("---------------------------");
+        			System.out.println("|Ingrese una opcion: ");
+        			System.out.println("---------------------------");
+            		System.out.println("|1.confirmar pedido");
+            		System.out.println("---------------------------");
+            		System.out.println("|2.cancelar pedido");
+            		System.out.println("---------------------------");
             		
             		 op = entrada.nextInt();
             		
@@ -242,8 +271,11 @@ public class Main {
 	}
 	
 	static void inventario() {
-		System.out.println("ingrese su identificacion: ");
+		System.out.println("");
+		System.out.println("Ingrese identificacion del administrador: ");
+		System.out.println("");
 		int ident = entrada.nextInt();
+		System.out.println("");
 		Administrador admin = Administrador.consultarAdmin(ident);
 		if(admin!=null) {
 			if(Producto.getProductos().isEmpty()) {
@@ -253,10 +285,13 @@ public class Main {
         	
         	else {
         		System.out.println(Producto.listaProductos());				//se muestra el inventario 
-            	
-        		System.out.println("Ingrese una opcion");
-    			System.out.println("1.editar inventario");
-    			System.out.println("2.Salir");
+        		System.out.println("---------------------------");
+        		System.out.println("|Ingrese una opcion");
+        		System.out.println("---------------------------");
+    			System.out.println("|1.editar inventario");
+    			System.out.println("---------------------------");
+    			System.out.println("|2.Salir");
+    			System.out.println("---------------------------");
     			int opcion1=entrada.nextInt();
     			
     			switch (opcion1) {
@@ -327,12 +362,16 @@ public class Main {
 		}
 	}
 	static void Mercanciainactiva() {
-		System.out.println("Ingrese la fecha inicial: ");
-    	System.out.println("ejemplo(12/11/2020)");
+		System.out.println("---------------------------");
+		System.out.println("|Ingrese la fecha inicial: ");
+    	System.out.println("|ejemplo(12/11/2020)");
+    	System.out.println("---------------------------");
     	String fecha1 = entrada.next();
     	
-    	System.out.println("Ingrese la fecha final: ");
-    	System.out.println("ejemplo(20/11/2020)");
+    	System.out.println("---------------------------");
+    	System.out.println("|Ingrese la fecha final: ");
+    	System.out.println("|ejemplo(20/11/2020)");
+    	System.out.println("---------------------------");
     	String fecha2 = entrada.next();
     	
     	String [] fecha_1 = fecha1.split("/"); 
@@ -377,12 +416,16 @@ public class Main {
 	static void balance() {
 		/*ingrese fecha(mes o año)
     	 * retorne clientes, #Total productos Vendidos y total precio de ventas*/
-    	System.out.println("Ingrese la fecha inicial: ");
-    	System.out.println("ejemplo(12/11/2020)");
+		System.out.println("---------------------------");
+    	System.out.println("|Ingrese la fecha inicial: ");
+    	System.out.println("|ejemplo(12/11/2020)");
+    	System.out.println("---------------------------");
     	String f1 = entrada.next();
     	
-    	System.out.println("Ingrese la fecha final: ");
-    	System.out.println("ejemplo(20/11/2020)");
+    	System.out.println("---------------------------");
+    	System.out.println("|Ingrese la fecha final: ");
+    	System.out.println("|ejemplo(20/11/2020)");
+    	System.out.println("---------------------------");
     	String f2 = entrada.next();
     	String [] fecha_f1 = f1.split("/"); 
     	String [] fecha_f2 = f2.split("/");
@@ -419,12 +462,16 @@ public class Main {
 	
 	
 	static void productosMasVendidos() {
-		System.out.println("Ingrese la fecha inicial: ");
-    	System.out.println("ejemplo(12/11/2020)");
+		System.out.println("---------------------------");
+		System.out.println("|Ingrese la fecha inicial: ");
+    	System.out.println("|ejemplo(12/11/2020)");
+    	System.out.println("---------------------------");
     	String fechan = entrada.next();
     	
-    	System.out.println("Ingrese la fecha final: ");
-    	System.out.println("ejemplo(20/11/2020)");
+    	System.out.println("---------------------------");
+    	System.out.println("|Ingrese la fecha final: ");
+    	System.out.println("|ejemplo(20/11/2020)");
+    	System.out.println("---------------------------");
     	String fechan2 = entrada.next();
     	
     	String [] fecha_n = fechan.split("/"); 
