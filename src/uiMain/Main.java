@@ -479,17 +479,15 @@ public class Main {
     	
     	String [] fecha_n = fechan.split("/"); 
     	String [] fecha_n2 = fechan2.split("/");
-    	ArrayList<Producto> productosT = Producto.getProductos();
+        
     	if(Integer.parseInt(fecha_n[2])==Integer.parseInt(fecha_n2[2])&&Integer.parseInt(fecha_n[1])==Integer.parseInt(fecha_n2[1])&&Integer.parseInt(fecha_n[0])<Integer.parseInt(fecha_n2[0])) {
     		
     		if(!Factura.rangoDeFacturas(fechan, fechan2).isEmpty()) {
     			ArrayList<Producto> Productos = Usuario.productosMasVendidos(fechan, fechan2);
-    			
     			if(!Productos.isEmpty()) {
-    				
-    				System.out.println("Nombre  Codido  CantidadInvent CantidadVend");
+    				System.out.println("Nombre   Codido de barras   Cantidad");
             		for (int i = 0; i < Productos.size(); i++) {
-						System.out.println(Productos.get(i).toString()+"---"+Productos.get(i).getVentas());
+						System.out.println(Productos.get(i).toString());
 						}
     			}else {
     				System.out.println("No se han vendido suficientes productos");
@@ -498,20 +496,17 @@ public class Main {
         		}else {
         			System.out.println("No hay facturas realizadas en el rango de tiempo pedido");
         		}
-    		for(int i=0; i<productosT.size();i++) {
-    			productosT.get(i).setVentas();
-    		}
+    		
     		
     		
     	}else if(Integer.parseInt(fecha_n[2])==Integer.parseInt(fecha_n2[2])&&Integer.parseInt(fecha_n[1])<Integer.parseInt(fecha_n2[1])) {
     		
     		if(!Factura.rangoDeFacturas(fechan, fechan2).isEmpty()) {
     			ArrayList<Producto> Productos = Usuario.productosMasVendidos(fechan, fechan2);
-    			
     			if(!Productos.isEmpty()) {
-    				System.out.println("Nombre  Codido  CantidadInvent CantidadVend");
+    				System.out.println("Nombre   Codido de barras   Cantidad");
             		for (int i = 0; i < Productos.size(); i++) {
-						System.out.println(Productos.get(i).toString()+"---"+Productos.get(i).getVentas());
+						System.out.println(Productos.get(i).toString());
 						}
     			}else {
     				System.out.println("No se han vendido suficientes productos");
@@ -520,17 +515,11 @@ public class Main {
         		}else {
         			System.out.println("No hay facturas realizadas en el rango de tiempo pedido");
         		}
-    			
-    		for(int i=0; i<productosT.size();i++) {
-    			productosT.get(i).setVentas();
-    		}
     		
     	}else {
     		System.out.println("El rango de las fechas no es correcto");
     	}
-    	for(int i=0; i<productosT.size();i++) {
-			productosT.get(i).setVentas();
-		}
+        
 	}
 	
 	static void crearAdmin() {
