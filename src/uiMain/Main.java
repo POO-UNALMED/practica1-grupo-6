@@ -14,6 +14,7 @@ public class Main {
 	static Scanner entrada = new Scanner(System.in);
 	static {
 		Persistencia.leerArchivos();
+		Persistencia.reasignar();
 	}
 	
 	public static void main(String[] args) {

@@ -146,6 +146,16 @@ public class Pedido implements Serializable {
 		Pedido.pedido = pedido;
 	}
 
+
+	public  int getNpedido() {
+		return num_pedido;
+	}
+
+
+	public static void setNpedido(int npedido) {
+		Npedido = npedido;
+	}
+
 	
 	
 }

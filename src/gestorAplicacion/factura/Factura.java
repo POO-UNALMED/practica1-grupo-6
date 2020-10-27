@@ -100,4 +100,14 @@ public class Factura implements Serializable{
 	public static void setFacturas(ArrayList<Factura> facturas) {
 		Factura.Facturas = facturas;
 	}
+
+	public static int getNumfactura() {
+		return Numfactura;
+	}
+
+	public static void setNumfactura(int numfactura) {
+		Numfactura = numfactura;
+	}
+	
+	
 }

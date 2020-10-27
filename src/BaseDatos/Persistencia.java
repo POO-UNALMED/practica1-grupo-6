@@ -292,6 +292,27 @@ public class Persistencia {
 		
 		
 	}
+	
+	public static void reasignar() {
+		if(!Factura.getLFacturas().isEmpty()) {
+			Factura.setNumfactura(Factura.getLFacturas().get(Factura.getLFacturas().size()-1).getNfacturas()+1);
+		}
+		
+		if(!Pedido.getLpedidos().isEmpty()) {
+			int x = Pedido.getLpedidos().size()-1;
+			Pedido.setNpedido(Pedido.getLpedidos().get(x).getNpedido());
+		}
+		
+		if(!Producto.getProductos().isEmpty()) {
+			int x = Producto.getProductos().size()-1;
+			Producto.setCodigo_de_barras1(Producto.getProductos().get(x).getCodigo_de_barras()+1);
+		}
+		
+		if(!DetallePedido.getDetallePedido().isEmpty()) {
+			int x =DetallePedido.getDetallePedido().size()-1;
+			DetallePedido.setId1(DetallePedido.getDetallePedido().get(x).getId()+1);
+		}
+	}
 }
 
 

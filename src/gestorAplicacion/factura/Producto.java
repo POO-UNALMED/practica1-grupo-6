@@ -131,4 +131,14 @@ public class Producto implements Serializable{
 	public static void setProducto(ArrayList<Producto> producto) {
 		Producto.productos= producto;
 	}
+
+	public static void setCodigo_de_barras1(long codigo_de_barras1) {
+		Producto.codigo_de_barras1 = codigo_de_barras1;
+	}
+
+	public long getCodigo_de_barras() {
+		return codigo_de_barras;
+	}
+	
+	
 }

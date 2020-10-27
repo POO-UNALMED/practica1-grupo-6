@@ -85,5 +85,10 @@ public class DetallePedido implements Serializable{
 	public static void setDpedido(ArrayList<DetallePedido> detallePedido) {
 		DetallePedido.Detalles = detallePedido;
 	}
+	public static void setId1(int id1) {
+		DetallePedido.id1 = id1;
+	}
+	
+	
 
 }
