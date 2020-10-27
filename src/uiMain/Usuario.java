@@ -88,7 +88,7 @@ static public ArrayList<Producto> productosMasVendidos(String fechaInicial,Strin
 	ArrayList<Factura> facturas = Factura.rangoDeFacturas(fechaInicial, fechaFinal);
 	ArrayList<Producto> productosVendidos = new ArrayList<>();
 	ArrayList<Producto> topMasVendidos = new ArrayList<>();
-	ArrayList<Producto> productosT = Producto.getProductos();
+	
 	
 	for (int i = 0; i < facturas.size(); i++) {
 		Pedido p = facturas.get(i).getPedido();
@@ -121,9 +121,7 @@ static public ArrayList<Producto> productosMasVendidos(String fechaInicial,Strin
 		}
 	}
 	
-	for(int i=0; i<productosT.size();i++) {
-		productosT.get(i).setVentas();
-	}
+	
 	return topMasVendidos;
 }
 
