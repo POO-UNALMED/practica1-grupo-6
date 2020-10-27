@@ -74,7 +74,7 @@ public class DetallePedido implements Serializable{
 
 	@Override
 	public String toString() {
-		return this.producto.getNombre()+ " "+this.producto.getCodigo_de_barras1()+" "+this.id+" "+Cantidad ;
+		return this.producto.getNombre()+ " "+this.producto.getCodigo_de_barras()+" "+this.id+" "+Cantidad ;
 	}
 	
 	public void eliminarDetalle(DetallePedido d,int Cantidad) {
