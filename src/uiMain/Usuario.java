@@ -40,7 +40,7 @@ public class Usuario {
 		ArrayList<Cliente> TopFinal = new ArrayList<Cliente>();
 		
 		for (int i = 0;i < 3;i++) {
-			long compra = 0;
+			double compra = 0;
 			int x=0;
 			for (int j=0;j<MayorCliente.size();j++) {
 				if(MayorCliente.get(j).totalCompras()>compra) {

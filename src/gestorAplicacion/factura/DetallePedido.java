@@ -9,7 +9,7 @@ import gestorAplicacion.cliente.Administrador;
 import gestorAplicacion.cliente.Cliente;
 
 public class DetallePedido implements Serializable{
-	
+	private static final long serialVersionUID = -1L;
 	private int id;
 	private int Cantidad;
 	private Pedido pedido;

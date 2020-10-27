@@ -10,6 +10,7 @@ import gestorAplicacion.cliente.Administrador;
 import gestorAplicacion.cliente.Cliente;
 
 public class Pedido implements Serializable {
+	private static final long serialVersionUID = -1L;
 	private ArrayList<String> productos = new ArrayList<String>();
 	private ArrayList<DetallePedido> DetalleProductos = new ArrayList<DetallePedido>();
 	private static ArrayList<Pedido> pedido = new ArrayList<Pedido>();

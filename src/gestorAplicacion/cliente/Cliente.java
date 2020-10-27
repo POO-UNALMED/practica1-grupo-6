@@ -25,13 +25,13 @@ public class Cliente extends Persona{
 
 
 	/*metodos*/
-	public long totalCompras() {
-		long control=0;
+	public double totalCompras() {
+		double control=0;
 		for (int i = 0;i <=listaFacturas.size();i++) {
 			control+=listaFacturas.get(i).getPedido().gettotalPago();
 		}
-		compras=control;
-		return compras;
+		
+		return control;
 	}
 	
 	public int cantidadClientes() {

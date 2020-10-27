@@ -8,6 +8,7 @@ import gestorAplicacion.cliente.Administrador;
 import gestorAplicacion.cliente.Cliente;
 
 public class Factura implements Serializable{
+	private static final long serialVersionUID = -1L;
 	private String Fecha;
 	private final int Nfactura;
 	private static int Numfactura=110;
@@ -47,7 +48,7 @@ public class Factura implements Serializable{
 		for (int i = 0; i < Facturas.size(); i++) {
 			if(Facturas.get(i).getNfacturas()==id) {
 					p=Facturas.get(i);
-					Facturas.remove(i);
+					
 					break;
 			}else {
 				p=null;

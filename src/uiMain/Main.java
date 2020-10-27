@@ -354,7 +354,7 @@ public class Main {
 			ArrayList <Cliente> Mayores = Usuario.clientesMayoritarios();
 			for(int i = 0;i < Mayores.size();i++) {
 				
-				System.out.println("Cliente "+ (i+1)+": " + Mayores.get(i));
+				System.out.println("Cliente "+ (i+1)+": " + Mayores.get(i)+" Compras= "+ Mayores.get(i).getCompras());
 				
 			}
 		}
