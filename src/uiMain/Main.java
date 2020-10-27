@@ -317,7 +317,7 @@ public class Main {
 	}
 	
 	static void realizarDevolucion() {
-		System.out.println("Ingrese Identificacion: ");
+		System.out.println("Ingrese identificacion del cliente: ");
     	int identificacion_2= entrada.nextInt(); 	
     	Cliente devolucion = Cliente.consultarCliente(identificacion_2);
     	
@@ -329,7 +329,7 @@ public class Main {
     		
     		if(consulta!=null) {												//verifica que exista la factura
     			System.out.println(consulta.getPedido().listaProductos());
-    			System.out.println("Ingrese el codigo del producto: ");
+    			System.out.println("Ingrese el CodigoDetalle del producto: ");
     			int codigoPro = entrada.nextInt();
     			if(consulta.getPedido().consultarProducto(codigoPro)!=null) {
     				System.out.println("Ingrese la cantidad de devolucion");

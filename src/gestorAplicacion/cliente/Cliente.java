@@ -27,7 +27,7 @@ public class Cliente extends Persona{
 	/*metodos*/
 	public double totalCompras() {
 		double control=0;
-		for (int i = 0;i <=listaFacturas.size();i++) {
+		for (int i = 0;i <listaFacturas.size();i++) {
 			control+=listaFacturas.get(i).getPedido().gettotalPago();
 		}
 		
@@ -75,10 +75,10 @@ public class Cliente extends Persona{
 
 	public String listaFactura() {
 		Iterator<Factura> iterator= listaFacturas.iterator();
-		StringBuffer lista=new StringBuffer ("Fecha Codigo\n");
+		StringBuffer lista=new StringBuffer ("Fecha       Codigo factura\n");
 		while(iterator.hasNext()) {
 			Factura factura =(Factura) iterator.next();
-			lista.append(factura.toString());
+			lista.append(factura.toString()+"\n");
 
 		}
 		return lista.toString();

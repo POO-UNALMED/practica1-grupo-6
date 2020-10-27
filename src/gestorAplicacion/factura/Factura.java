@@ -64,7 +64,7 @@ public class Factura implements Serializable{
 		return ("Numero de factura: "+ Nfactura + "\nFecha: "+ Fecha +"\n"+ pedido.listaProductos());
 	}
 	public String toString() {
-		return Fecha +" "+ Nfactura;
+		return Fecha +"---"+ Nfactura;
 	}
 	
 	public static ArrayList<Factura> rangoDeFacturas(String fecha1,String fecha2){					//recibe dos fechas en el formato(dia/mes/año) 
