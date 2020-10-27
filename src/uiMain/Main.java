@@ -74,7 +74,7 @@ public class Main {
 		            	crearAdmin();
 		            	break;
 		            case 0:
-		            	System.out.println("Saliendo...");
+		            	System.out.println("Programa finalizado correctamente.");
 		            	break;
 		         
 		            default: System.out.println("opcion no valida");;
