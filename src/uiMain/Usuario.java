@@ -43,13 +43,13 @@ public class Usuario {
 			double compra = 0;
 			int x=0;
 			for (int j=0;j<MayorCliente.size();j++) {
-				if(MayorCliente.get(j).totalCompras()>compra) {
+				if(MayorCliente.get(j).totalCompras()>compra&&!TopFinal.contains(MayorCliente.get(j))) {
 					x=j;
 					compra=MayorCliente.get(j).totalCompras();
 				}
 			}
 			TopFinal.add(MayorCliente.get(x));
-			MayorCliente.remove(MayorCliente.get(x));
+			
 		}
 		return TopFinal;
 	}
