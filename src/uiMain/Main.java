@@ -387,7 +387,7 @@ public class Main {
     			ArrayList<Producto> Productos = Usuario.mercanciaMuerta(fecha1, fecha2);
     			
     			if(!Productos.isEmpty()) {
-    				System.out.println("Nombre   Codido de barras   Cantidad");
+    				System.out.println("Nombre   Codido de barras   Cantidad en inventario");
             		for (int i = 0; i < Productos.size(); i++) {
 						System.out.println(Productos.get(i).toString());
     			}

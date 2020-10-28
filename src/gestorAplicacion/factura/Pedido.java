@@ -22,6 +22,7 @@ public class Pedido implements Serializable {
 	
 	
 	public static ArrayList<Pedido> getLpedidos(){
+		
 		return pedido;
 	}
 	
@@ -29,6 +30,7 @@ public class Pedido implements Serializable {
 	public Pedido() {
 		this.num_pedido=Npedido;
 		Npedido++;
+		pedido.add(this);
 	}
 	
 	
